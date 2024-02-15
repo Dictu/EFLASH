@@ -1,0 +1,16 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: aa8c6a9a-0c72-4f46-81b8-b4e87065de7f
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: lDM9mvIGAu8Sw8rt-uCO4Sr7yX5VPrDPxYcawkbKd6k
+id: node_make_unsticky_action
+label: 'Inhoud niet vastgeplakt bovenaan de lijst maken'
+type: node
+plugin: node_make_unsticky_action
+configuration: {  }

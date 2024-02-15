@@ -1,0 +1,15 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 9cd21753-82f0-4935-ad70-e91701d28e8f
+langcode: nl
+status: true
+dependencies: {  }
+id: snel_bericht
+label: 'Snel bericht'
+description: ''
+body:
+  value: "<p>Mogelijke storing</p>\r\n\r\n<p>Er is een storing gemeld. We zijn aan het onderzoeken wat of er aan de hand is.</p>\r\n"
+  format: wysiwyg_default
+weight: null
+node_types: {  }

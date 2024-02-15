@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+ SPDX-License-Identifier: EUPL-1.2
+-->
+
+<FindBugsFilter>
+    <Match>
+        <Class name="~.*\.R\$.*"/>
+        <Bug code="Nm"/>
+    </Match>
+    <!-- ignore all bugs in test classes, except for those bugs specifically relating to JUnit tests -->
+    <Match>
+        <Class name="~.*\.*Test" />
+        <!-- test classes are suffixed by 'Test' -->
+        <Not>
+            <Bug code="IJU" /> <!-- 'IJU' is the code for bugs related to JUnit test code -->
+        </Not>
+    </Match>
+</FindBugsFilter>

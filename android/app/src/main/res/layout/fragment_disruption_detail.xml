@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+ SPDX-License-Identifier: EUPL-1.2
+-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="nl.minez.eovb.ezoef.view.viewModel.DisruptionViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/detail_header"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:text="@{viewModel.title}"
+                    android:textColor="@android:color/white"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/text_large_title"
+                    android:typeface="@{viewModel.boldTypeFace}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:text="@{viewModel.service}"
+                    android:textColor="@color/colorTranslucentWhite"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/text_small_title"
+                    android:typeface="@{viewModel.regularTypeFace}" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="4dp"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:text="@{viewModel.location}"
+                        android:textColor="@color/colorTranslucentWhite"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/text_small_title"
+                        android:typeface="@{viewModel.regularTypeFace}" />
+=
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:ellipsize="end"
+                        android:gravity="left"
+                        android:lineSpacingExtra="4dp"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:text="@{viewModel.createdTime}"
+                        android:textColor="@color/colorTranslucentWhite"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/text_extra_small_body"
+                        android:typeface="@{viewModel.regularTypeFace}" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:lineSpacingExtra="4dp"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:text="@{viewModel.updatedTime}"
+                        android:textColor="@color/colorTranslucentWhite"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/text_extra_small_body"
+                        android:typeface="@{viewModel.regularTypeFace}" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLineGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/touchable_background_white"
+                android:lineSpacingExtra="4dp"
+                android:padding="20dp"
+                android:text="@{viewModel.text}"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorDarkText"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/text_body"
+                android:typeface="@{viewModel.regularTypeFace}" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLightGrey"
+                android:visibility="@{viewModel.additionalInfoVisibility}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/additional_info"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorAccent"
+                android:typeface="@{viewModel.regularTypeFace}"
+                android:visibility="@{viewModel.additionalInfoVisibility}" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_updates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{viewModel.additionalInfoVisibility}" />
+            </android.support.v4.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,19 @@
+<!--
+ Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+ SPDX-License-Identifier: EUPL-1.2
+-->
+
+<resources>
+    <string name="app_name">EFLASH</string>
+    <string name="choose_one_or_more_locations_for_each_service">Kies één of meerdere meldingstypen.</string>
+    <string name="info_ps" formatted="false"><![CDATA[
+    Opgeloste verstoringen zijn maximaal een week zichtbaar.<br><br>
+    Versie %s %s<br><br>
+    Voor meldingen en vragen:<br>
+    <a href=\'mailto:contact@e-overheidvoorbedrijven.nl\'>contact@e-overheidvoorbedrijven.nl</a><br><br>
+    Bellen op werkdagen tussen 9u en 17u (GMT+1):<br>
+    Tel: <a href=\'tel:31880424230\'>+31 88 0424230</a>
+    ]]></string>
+    <string name="no_access_register_again">Je hebt geen toegang.\nNeem contact op met onze service desk.</string>
+    <string name="not_active_activate_or_register">Je hebt geen toegang.\nNeem contact op met onze service desk.</string>
+</resources>

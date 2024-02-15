@@ -1,0 +1,8 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+interface:
+  default: php_mail
+_core:
+  default_config_hash: rYgt7uhPafP2ngaN_ZUPFuyI4KdE0zU868zLNSlzKoE
+langcode: nl

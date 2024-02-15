@@ -1,0 +1,565 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: eZoefapp.nl
+  description: 'Backend for the eZoef and eFlash mobile apps.'
+host: 'eZoefapp.nl'
+basePath: /
+securityDefinitions:
+  auth:
+    type: oauth2
+    flow: implicit
+    authorizationUrl: ''
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /simple-oauth/refresh:
+    get:
+      description: 'TODO: Add Description'
+      summary: oauth-refresh
+      tags:
+        - Misc
+      operationId: oauth-refresh
+      produces:
+        - application/json
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security:
+        - auth: []
+      x-unitTests:
+        - request:
+            method: GET
+            uri: /simple-oauth/refresh
+            headers:
+              Authorization: 'Bearer {{ezoef_access_token}}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: oauth-refresh
+          x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/v1/messagetypes:
+    get:
+      description: 'TODO: Add Description'
+      summary: Retrieve available messagetypes
+      tags:
+        - Misc
+      operationId: Messagetypes
+      produces:
+        - application/json
+      parameters:
+        - name: _format
+          in: query
+          required: true
+          type: string
+          description: ''
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security:
+        - auth: []
+      x-unitTests:
+        - request:
+            method: GET
+            uri: /api/v1/messagetypes?_format=hal_json
+            headers:
+              Authorization: 'Bearer {{ezoef_access_token}}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Nicol Messagetypes
+          x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/v1/incidents:
+    post:
+      description: 'TODO: Add Description'
+      summary: EZFLASH incidents
+      tags:
+        - Misc
+      operationId: EZFLASH incidents
+      produces:
+        - application/json
+      parameters:
+        - name: _format
+          in: query
+          required: true
+          type: string
+          description: ''
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/PushNotificationsRequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security:
+        - auth: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /api/v1/incidents?_format=json
+            headers:
+              Content-Type: application/json
+              Authorization: 'Bearer {{ezoef_flash_token}}'
+            body: |-
+              {
+                  "type": [{"target_id": "incident"}],
+                  "state":["open"],
+                  "messagetypes": [1,2,4,3,5,6,7,8,9,10,11,12,13,14,15,16,17]
+              }
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Nicol  EZFLASH incidents
+          x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/v1/incidents_anon:
+    post:
+      description: 'TODO: Add Description'
+      summary: eFlash retrieve incidents
+      tags:
+        - Misc
+      operationId: eFlash incidents
+      produces:
+        - application/json
+      parameters:
+        - name: _format
+          in: query
+          required: true
+          type: string
+          description: ''
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/NicolIncidentsAnonrequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security:
+        - auth: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /api/v1/incidents_anon?_format=json
+            headers:
+              Content-Type: application/json
+              Authorization: 'Bearer {{ezoef_flash_token}}'
+            body: |-
+              {
+                  "type": [{"target_id": "incident"}],
+                  "state":["open"],
+                  "messagetypes": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+              }
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Nicol incidents anon
+          x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/v1/register:
+    post:
+      description: 'TODO: Add Description'
+      summary: registreren (met email)
+      tags:
+        - Misc
+      operationId: registreren (met email)
+      produces:
+        - application/json
+      parameters:
+        - name: _format
+          in: query
+          required: true
+          type: string
+          description: ''
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/Registreren(metEmail)request'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+        - name: X-CSRF-Token
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /api/v1/register?_format=hal_json
+            headers:
+              Content-Type: application/json
+              X-CSRF-Token: TI6pm0nrBSJegqVVJeeoV_B1zrvOCGZeo9LO82sWZ-U
+            body: |-
+              {
+                  "name": "Joepie",
+                  "mail": "j.jansen@dictu.nl"
+              }
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: registreren (met email)
+          x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/v1/push_notifications:
+    post:
+      description: 'TODO: Add Description'
+      summary: Register device for push messages for given messagetypes
+      tags:
+        - Misc
+      operationId: register push token
+      produces:
+        - application/json
+      parameters:
+        - name: _format
+          in: query
+          required: true
+          type: string
+          description: ''
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/PushNotificationsRequest'
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security:
+        - auth: []
+      x-unitTests:
+        - request:
+            method: POST
+            uri: /api/v1/push_notifications?_format=json
+            headers:
+              Content-Type: application/json
+              Authorization: Bearer cIz_vqZWqVjZYWVjUuy8SETqiydaHe5KFgGmflhcpoQ
+            body: |-
+              {
+                  "token": "8bf61e7aee2da5bef2369cb469ababb4047089008953d05b0e466a3d0be097b1",
+                  "type": "ios",
+                  "messagetypes":[1,2,3,4]
+              }
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: api - register push token
+          x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    delete:
+      description: 'TODO: Add Description'
+      summary: access token DELETE
+      tags:
+        - Misc
+      operationId: access token DELETE
+      produces:
+        - application/json
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security:
+        - auth: []
+      x-unitTests:
+        - request:
+            method: DELETE
+            uri: /api/v1/push_notifications/{pushtoken}
+            headers:
+              Authorization: 'Bearer {{ezoef_access_token}}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: access token DELETE
+          x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /rest/session/token:
+    get:
+      description: 'TODO: Add Description'
+      summary: xsrf token
+      tags:
+        - Misc
+      operationId: xsrf token
+      produces:
+        - application/json
+      parameters:
+        - name: Content-Type
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security: []
+      x-unitTests:
+        - request:
+            method: GET
+            uri: /rest/session/token
+            headers:
+              Content-Type: application/hal+json
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: xsrf token
+          x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /api/v1/messagetypes_anon:
+    get:
+      description: 'TODO: Add Description'
+      summary: List eFlash Messagetypes
+      tags:
+        - Misc
+      operationId: eFlash Messagetypes
+      produces:
+        - application/json
+      parameters:
+        - name: _format
+          in: query
+          required: true
+          type: string
+          description: ''
+        - name: Authorization
+          in: header
+          required: true
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: ''
+      security:
+        - auth: []
+      x-unitTests:
+        - request:
+            method: GET
+            uri: /api/v1/messagetypes_anon?_format=hal_json
+            headers:
+              Authorization: 'Bearer {{ezoef_flash_token}}'
+          expectedResponse:
+            x-allowExtraHeaders: true
+            x-bodyMatchMode: NONE
+            x-arrayOrderedMatching: false
+            x-arrayCheckCount: false
+            x-matchResponseSchema: true
+            headers: {}
+          x-testShouldPass: true
+          x-testEnabled: true
+          x-testName: Nicol Messagetypes Anon
+          x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+definitions:
+  Type:
+    title: Type
+    type: object
+    properties:
+      target_id:
+        description: ''
+        type: string
+    required:
+      - target_id
+  NicolIncidentsAnonrequest:
+    title: eFlash incidents Request
+    type: object
+    properties:
+      type:
+        description: ''
+        type: array
+        items:
+          $ref: '#/definitions/Type'
+      state:
+        description: ''
+        type: array
+        items:
+          type: string
+      messagetypes:
+        description: ''
+        type: array
+        items:
+          type: integer
+          format: int32
+    required:
+      - type
+      - state
+      - messagetypes
+  Registreren(metEmail)request:
+    title: registreren (met email)Request
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      mail:
+        description: ''
+        type: string
+    required:
+      - name
+      - mail
+  PushNotificationsRequest:
+    title: push_notifications Request
+    type: object
+    properties:
+      token:
+        description: ''
+        type: string
+      type:
+        description: ''
+        type: string
+      messagetypes:
+        description: ''
+        type: array
+        items:
+          type: integer
+          format: int32
+    required:
+      - token
+      - type
+      - messagetypes

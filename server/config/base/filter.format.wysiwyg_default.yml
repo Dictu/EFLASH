@@ -1,0 +1,34 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: aa6b51cb-1d6c-476d-a319-c1123f270e78
+langcode: nl
+status: true
+dependencies:
+  module:
+    - wysiwyg_template_core
+name: 'WYSIWYG default'
+format: wysiwyg_default
+weight: -10
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_wysiwyg_cleanup:
+    id: filter_wysiwyg_cleanup
+    provider: wysiwyg_template_core
+    status: true
+    weight: 10
+    settings: {  }

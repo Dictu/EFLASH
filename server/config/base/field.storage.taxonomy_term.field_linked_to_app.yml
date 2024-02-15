@@ -1,0 +1,30 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: d1f8f9fd-f8ce-4834-8bd6-8b029e573dab
+langcode: nl
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_linked_to_app
+field_name: field_linked_to_app
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ezoef
+      label: ezoef
+    -
+      value: eflash
+      label: eflash
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

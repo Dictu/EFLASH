@@ -1,0 +1,11 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: bf812428-4eec-43ec-980a-b44495f2bfd7
+langcode: nl
+status: true
+dependencies: {  }
+name: 'App Domains'
+vid: app_domains
+description: 'Lijst met geldige domeinnamen voor de eZoef app'
+weight: 0

@@ -1,0 +1,13 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: cb0bb478-3883-4dbd-b91f-c947f602526c
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7klS5IWXrwzVaPpYZFAs6wcx8U2FF1X73OfrtTsvuvE
+id: fallback
+label: 'Fallback datumnotatie'
+locked: true
+pattern: 'D, m/d/Y - H:i'

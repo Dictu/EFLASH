@@ -1,0 +1,87 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+variables:
+  WEBROOT_PROD: '/data/ezoef.prod'
+  WEBROOT_STAGING: '/data/ezoef.acc'
+  WEBROOT_TEST: '/data/ezoef.test'
+
+stages:
+  - deploy
+
+deploy_test:
+  stage: deploy
+  tags:
+    - diny_acc
+  script:
+    - echo "Deploying '$CI_COMMIT_REF_NAME' to TEST server"
+    - cd $WEBROOT_TEST
+    - git reset --hard
+    - git fetch origin
+    - git checkout $CI_COMMIT_REF_NAME
+    - git pull origin $CI_COMMIT_REF_NAME
+    - scl enable php74 "/home/gitlab-runner/bin/composer selfupdate"
+    - scl enable php74 "/home/gitlab-runner/bin/composer config gitlab-token.SSSSSSSSSSS $COMPOSER_USER_PRIVATE_ACCESS_TOKEN"
+    - scl enable php74 "/home/gitlab-runner/bin/composer install --no-interaction"
+    - scl enable php74 "vendor/bin/drush cr"
+    - scl enable php74 "vendor/bin/drush updb -y"
+    - scl enable php74 "vendor/bin/drush cim -y"
+    - scl enable php74 "vendor/bin/drush cset raven.settings release "$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA" -y"
+    - scl enable php74 "vendor/bin/drush cr"
+  environment:
+    name: test
+    url: https://test.ezoefapp.nl
+  only:
+  - develop
+
+deploy_staging:
+  stage: deploy
+  tags:
+    - diny_acc
+  script:
+    - echo "Deploying '$CI_COMMIT_REF_NAME' to TEST server"
+    - cd $WEBROOT_STAGING
+    - git reset --hard
+    - git fetch origin
+    - git checkout $CI_COMMIT_REF_NAME
+    - git pull origin $CI_COMMIT_REF_NAME
+    - scl enable php74 "/home/gitlab-runner/bin/composer selfupdate"
+    - scl enable php74 "/home/gitlab-runner/bin/composer config gitlab-token.SSSSSSSSSSS $COMPOSER_USER_PRIVATE_ACCESS_TOKEN"
+    - scl enable php74 "/home/gitlab-runner/bin/composer install --no-interaction"
+    - scl enable php74 "vendor/bin/drush cr"
+    - scl enable php74 "vendor/bin/drush updb -y"
+    - scl enable php74 "vendor/bin/drush cim -y"
+    - scl enable php74 "vendor/bin/drush cset raven.settings release "$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA" -y"
+    - scl enable php74 "vendor/bin/drush cr"
+  environment:
+    name: staging
+    url: https://acc.ezoefapp.nl
+  only:
+  - /^release.*$/
+  - /^hotfix.*$/
+
+deploy_production:
+  stage: deploy
+  tags:
+    - diny_prod
+  script:
+    - echo "Deploy to staging server"
+    - cd $WEBROOT_PROD
+    - git reset --hard
+    - git fetch origin
+    - git checkout $CI_COMMIT_REF_NAME
+    - git pull origin $CI_COMMIT_REF_NAME
+    - scl enable php74 "/home/gitlab-runner/bin/composer selfupdate"
+    - scl enable php74 "/home/gitlab-runner/bin/composer config gitlab-token.SSSSSSSSSSS $COMPOSER_USER_PRIVATE_ACCESS_TOKEN"
+    - scl enable php74 "/home/gitlab-runner/bin/composer install --no-dev --no-interaction"
+    - scl enable php74 "vendor/bin/drush cr"
+    - scl enable php74 "vendor/bin/drush updb -y"
+    - scl enable php74 "vendor/bin/drush cim -y"
+    - scl enable php74 "vendor/bin/drush cset raven.settings release "$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA" -y"
+    - scl enable php74 "vendor/bin/drush cr"
+  environment:
+    name: production
+    url: https://ezoefapp.nl
+  only:
+  - tags
+  when: manual

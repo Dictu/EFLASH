@@ -1,0 +1,207 @@
+[
+ {
+ "status" : "open",
+ "location" : [
+               {
+               "tid" : "65",
+               "name" : "Berichtenbox storing"
+               }
+               ],
+ "id" : "78",
+ "services" : [
+               {
+               "tid" : "48",
+               "name" : "Berichtenbox"
+               }
+               ],
+ "title" : "Nieuwe storing Berichtenbox",
+ "field_updates" : [
+ 
+ ],
+ "created" : "2016-12-15T09:55:10+0200",
+ "changed" : "2016-12-15T09:55:29+0200",
+ "body" : "Hallo hoi hoi"
+ },
+ {
+ "status" : "open",
+ "location" : [
+               {
+               "tid" : "32",
+               "name" : "Berichtenbox storing ACC"
+               }
+               ],
+ "id" : "77",
+ "services" : [
+               {
+               "tid" : "48",
+               "name" : "Berichtenbox"
+               }
+               ],
+ "title" : "Nieuwe storing Berichtenbox ACC",
+ "field_updates" : [
+ 
+ ],
+ "created" : "2016-12-15T09:51:29+0200",
+ "changed" : "2016-12-15T09:51:53+0200",
+ "body" : "Dit is speciaal voor Berichtenbox acceptatie"
+ },
+ {
+ "status" : "open",
+ "location" : [
+ 
+ ],
+ "id" : "76",
+ "services" : [
+               {
+               "tid" : "48",
+               "name" : "Berichtenbox"
+               }
+               ],
+ "title" : "Nieuwe storing Berichtenbox zonder berichttype",
+ "field_updates" : [
+ 
+ ],
+ "created" : "2016-12-15T09:49:36+0200",
+ "changed" : "2016-12-15T09:50:57+0200",
+ "body" : "Dit is een storing voor dienst Berichtenbox zonder berichttype."
+ },
+ {
+ "status" : "open",
+ "location" : [
+ 
+ ],
+ "id" : "75",
+ "services" : [
+               {
+               "tid" : "48",
+               "name" : "Berichtenbox"
+               }
+               ],
+ "title" : "Test",
+ "field_updates" : [
+ 
+ ],
+ "created" : "2016-12-14T12:29:54+0200",
+ "changed" : "2016-12-14T12:30:03+0200",
+ "body" : "Test"
+ },
+ {
+ "status" : "open",
+ "location" : [
+               {
+               "tid" : "65",
+               "name" : "Berichtenbox onderhoud"
+               },
+               {
+               "tid" : "66",
+               "name" : "Berichtenbox onderhoud PROD"
+               },
+               {
+               "tid" : "67",
+               "name" : "Berichtenbox onderhoud PROD"
+               }
+               ],
+ "id" : "70",
+ "services" : [
+               {
+               "tid" : "48",
+               "name" : "Berichtenbox"
+               },
+               {
+               "tid" : "51",
+               "name" : "Berichtenbox"
+               },
+               {
+               "tid" : "53",
+               "name" : "Berichtenbox"
+               }
+               ],
+ "title" : "Berichtenbox",
+ "field_updates" : [
+                    {
+                    "cid" : "78",
+                    "created" : "2016-12-14T08:36:31+0200",
+                    "update" : "Hier een update bericht "
+                    }
+                    ],
+ "created" : "2016-12-14T08:31:11+0200",
+ "changed" : "2016-12-14T08:31:11+0200",
+ "body" : "Alle servers krijgen extra harddiskruimte waardoor diensten voor enige tijd onbereikbaar zijn."
+ },
+ {
+ "status" : "open",
+ "location" : [
+               {
+               "tid" : "32",
+               "name" : "Berichtenbox storing PROD"
+               }
+               ],
+ "id" : "50",
+ "services" : [
+               {
+               "tid" : "48",
+               "name" : "Berichtenbox"
+               }
+               ],
+ "title" : "Berichtenbox - storing productie",
+ "field_updates" : [
+                    {
+                    "cid" : "58",
+                    "created" : "2016-12-14T08:14:04+0200",
+                    "update" : "Bij Berichtenbox is er een storing met de productieserver"
+                    }
+                    ],
+ "created" : "2016-12-14T08:13:36+0200",
+ "changed" : "2016-12-14T08:13:36+0200",
+ "body" : "SS - Amersfoort"
+ },
+ {
+ "status" : "open",
+ "location" : [
+ 
+ ],
+ "id" : "49",
+ "services" : [
+               {
+               "tid" : "48",
+               "name" : "Berichtenbox"
+               }
+               ],
+ "title" : "Berichtenbox - Alle berichttypen",
+ "field_updates" : [
+                    {
+                    "cid" : "87",
+                    "created" : "2016-12-14T11:01:37+0200",
+                    "update" : "Een 2e update bericht"
+                    },
+                    {
+                    "cid" : "57",
+                    "created" : "2016-12-14T08:13:09+0200",
+                    "update" : "Alle berichttypen van Berichtenbox zijn momenteel niet bereikbaar"
+                    }
+                    ],
+ "created" : "2016-12-14T08:12:12+0200",
+ "changed" : "2016-12-14T08:12:12+0200",
+ "body" : "Berichtenbox - Alle berichttypen"
+ },
+ {
+ "status" : "open",
+ "location" : [
+ 
+ ],
+ "id" : "48",
+ "services" : [
+               {
+               "tid" : "48",
+               "name" : "Berichtenbox"
+               }
+               ],
+ "title" : "test1",
+ "field_updates" : [
+ 
+ ],
+ "created" : "2016-12-14T08:04:00+0200",
+ "changed" : "2016-12-14T08:05:30+0200",
+ "body" : "test"
+ }
+ ]

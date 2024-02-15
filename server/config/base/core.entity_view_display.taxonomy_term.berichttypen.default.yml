@@ -1,0 +1,34 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: a72aeba2-56ed-4dd7-8ae2-e26e547fa54d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.berichttypen.field_linked_to_app
+    - taxonomy.vocabulary.berichttypen
+  module:
+    - options
+    - text
+id: taxonomy_term.berichttypen.default
+targetEntityType: taxonomy_term
+bundle: berichttypen
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_linked_to_app:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  langcode: true

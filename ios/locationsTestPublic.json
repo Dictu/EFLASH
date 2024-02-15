@@ -1,0 +1,19 @@
+{
+    "Berichtenbox" : {
+        "id" : "48",
+        "locations" : [
+                       {
+                       "id" : "67",
+                       "name" : "Berichtenbox onderhoud"
+                       },
+                       {
+                       "id" : "56",
+                       "name" : "Berichtenbox storing"
+                       },
+                       {
+                       "id" : "32",
+                       "name" : "Berichtenbox langdurige storing"
+                       }
+                       ]
+    }
+}

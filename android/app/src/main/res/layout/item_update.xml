@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+ SPDX-License-Identifier: EUPL-1.2
+-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="nl.minez.eovb.ezoef.view.viewModel.UpdateViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/updateView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:bufferType="spannable"
+            android:ellipsize="end"
+            android:text="@{viewModel.description}"
+            android:textColor="@color/colorDarkText"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/text_body"
+            android:typeface="@{viewModel.regularTypeFace}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:bufferType="spannable"
+            android:ellipsize="end"
+            android:text="@{viewModel.time}"
+            android:textColor="@color/colorButtonNormal"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/text_body"
+            android:typeface="@{viewModel.regularTypeFace}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLineGrey" />
+
+    </LinearLayout>
+</layout>

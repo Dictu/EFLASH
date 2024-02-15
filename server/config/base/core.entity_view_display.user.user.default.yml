@@ -1,0 +1,86 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 990b2ed4-8e42-4dd8-90e2-333b738a12cf
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_push_announcements
+    - field.field.user.user.field_push_device_id
+    - field.field.user.user.field_push_device_type
+    - field.field.user.user.field_push_enabled
+    - field.field.user.user.field_push_messagetypes
+    - field.field.user.user.field_push_updates
+    - field.field.user.user.field_registered_email_address
+  module:
+    - options
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_push_announcements:
+    type: boolean
+    weight: 2
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_push_device_id:
+    type: string
+    weight: 3
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_push_device_type:
+    type: list_default
+    weight: 4
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_push_enabled:
+    type: boolean
+    weight: 0
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_push_messagetypes:
+    type: entity_reference_label
+    weight: 5
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_push_updates:
+    type: boolean
+    weight: 1
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_registered_email_address:
+    type: basic_string
+    weight: 6
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  member_for: true

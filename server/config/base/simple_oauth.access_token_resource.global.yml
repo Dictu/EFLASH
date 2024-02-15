@@ -1,0 +1,14 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 1e7fad9e-1563-4f7d-b290-aef77b9d5a91
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: SEUWlb7tNFwN3K8AXQ4GM3qp3m2-fQlz7bEjHQWVbPc
+id: global
+label: Global
+description: 'Tokens with access to this resource can get their requests authenticated with the corresponding Drupal user.'
+locked: true
+permissions: null

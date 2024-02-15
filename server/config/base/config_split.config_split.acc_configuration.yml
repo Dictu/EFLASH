@@ -1,0 +1,24 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 14619038-6e51-473e-a5c8-63e9986e5904
+langcode: nl
+status: false
+dependencies: {  }
+id: acc_configuration
+label: 'ACC configuration'
+description: ''
+folder: ../config/acc
+module: {  }
+theme: {  }
+blacklist:
+  - push_notifications.apns
+  - push_notifications.apns.flash
+  - push_notifications.apns.zoef
+  - push_notifications.gcm
+  - push_notifications.gcm.flash
+  - push_notifications.gcm.zoef
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

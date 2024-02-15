@@ -1,0 +1,1214 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D5501C62416455A00D544C2 /* Profile+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5501C42416455A00D544C2 /* Profile+Update.swift */; };
+		1D5501C924165BD300D544C2 /* LocationsTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5501C724165BD300D544C2 /* LocationsTree.swift */; };
+		1DEC096920ECF60F003D32E7 /* ROsanswebtextbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEC096220ECF609003D32E7 /* ROsanswebtextbold.ttf */; };
+		1DEC096C20ECF613003D32E7 /* ROsanswebtextitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEC096320ECF609003D32E7 /* ROsanswebtextitalic.ttf */; };
+		1DEC096F20ECF617003D32E7 /* ROsanswebtextregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEC096420ECF609003D32E7 /* ROsanswebtextregular.ttf */; };
+		D2D9267321FEE63800B8E94F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB634C4D1CF5B10E004BA67C /* Assets.xcassets */; };
+		D2D9267521FEED1000B8E94F /* Launch Screen EFlash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D9267421FEED1000B8E94F /* Launch Screen EFlash.storyboard */; };
+		E063DF7FFA854DD8BABE7487 /* Pods_EFLASH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D60564BD6AB909B150C34FC /* Pods_EFLASH.framework */; };
+		ED8BA2C221DCC2DB00FE8BFF /* EFLASHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8BA2C121DCC2DB00FE8BFF /* EFLASHTests.swift */; };
+		FB2B57821F0A45A5005BF738 /* NotificationUpdatesSwitchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B577E1F0A45A5005BF738 /* NotificationUpdatesSwitchesViewController.swift */; };
+		FB2B57861F0A45A5005BF738 /* NotificationUpdatesSwitchesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB2B577F1F0A45A5005BF738 /* NotificationUpdatesSwitchesViewController.xib */; };
+		FB2B578C1F0A4EC7005BF738 /* UIAlertController+NotificationsUpdatesOnOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B57891F0A4EC7005BF738 /* UIAlertController+NotificationsUpdatesOnOff.swift */; };
+		FB3AA356206D1533004A0934 /* CopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3AA354206D1494004A0934 /* CopyableLabel.swift */; };
+		FBA146BF207395C000B10E4B /* NSDate+ReadableDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA146BC207395C000B10E4B /* NSDate+ReadableDateTime.swift */; };
+		FBA695311E02A56300629E56 /* openDisruptionsTestPublic.json in Resources */ = {isa = PBXBuildFile; fileRef = FBA695301E02A56300629E56 /* openDisruptionsTestPublic.json */; };
+		FBAE789F1E00021800870C02 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8EDE561CFC374100E582C5 /* MainTableViewCell.swift */; };
+		FBAE78A01E00021800870C02 /* OnOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB115C4C1D07FAC9002AF926 /* OnOffViewController.swift */; };
+		FBAE78A11E00021800870C02 /* NoRecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB115C531D081645002AF926 /* NoRecordsTableViewCell.swift */; };
+		FBAE78A21E00021800870C02 /* UIAlertController+AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5387BE1D3F91C200CEB0B5 /* UIAlertController+AuthError.swift */; };
+		FBAE78A31E00021800870C02 /* UIAlertController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5E81D31D12D4F50052F9C0 /* UIAlertController+Error.swift */; };
+		FBAE78A41E00021800870C02 /* DisruptionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8EDE4D1CFC29D100E582C5 /* DisruptionDetailViewController.swift */; };
+		FBAE78A51E00021800870C02 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB42FB5D1D1BD39E0034A367 /* InfoViewController.swift */; };
+		FBAE78A61E00021800870C02 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3B70BC1CFD9C27001C902E /* Location.swift */; };
+		FBAE78A71E00021800870C02 /* AppAnalyticsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6178AE851D4F567F008E1074 /* AppAnalyticsUtil.swift */; };
+		FBAE78A81E00021800870C02 /* ApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8EDE5C1CFC630300E582C5 /* ApiConnector.swift */; };
+		FBAE78A91E00021800870C02 /* UIAlertController+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB42FB621D1BDDE80034A367 /* UIAlertController+Info.swift */; };
+		FBAE78AA1E00021800870C02 /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8EDE521CFC2BFC00E582C5 /* DetailHeaderView.swift */; };
+		FBAE78AB1E00021800870C02 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8EDE541CFC2D7100E582C5 /* GradientView.swift */; };
+		FBAE78AC1E00021800870C02 /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9394E91CF5D2850047EF7E /* MenuHeaderView.swift */; };
+		FBAE78AD1E00021800870C02 /* String+HtmlEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2B3371D10030C008175D4 /* String+HtmlEncoded.swift */; };
+		FBAE78AE1E00021800870C02 /* DisruptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2DCCA51CF5BD19001A85D4 /* DisruptionsViewController.swift */; };
+		FBAE78AF1E00021800870C02 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D74A01D05712F0023B7A3 /* Update.swift */; };
+		FBAE78B01E00021800870C02 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3B70B81CFD9AA7001C902E /* Profile.swift */; };
+		FBAE78B11E00021800870C02 /* NSDate+RelativeTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8EDE5F1CFC8F5400E582C5 /* NSDate+RelativeTime.swift */; };
+		FBAE78B21E00021800870C02 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9394E41CF5D1480047EF7E /* MenuViewController.swift */; };
+		FBAE78B31E00021800870C02 /* UIAlertController+OnOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB115C511D07FBD6002AF926 /* UIAlertController+OnOff.swift */; };
+		FBAE78B41E00021800870C02 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3B70BA1CFD9B07001C902E /* Service.swift */; };
+		FBAE78B51E00021800870C02 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8EDE5A1CFC531000E582C5 /* SectionHeaderView.swift */; };
+		FBAE78B61E00021800870C02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB634C461CF5B10E004BA67C /* AppDelegate.swift */; };
+		FBAE78B71E00021800870C02 /* CheckboxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3B70BF1CFDD1A0001C902E /* CheckboxesViewController.swift */; };
+		FBAE78B81E00021800870C02 /* Disruption.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFA25531CF6F1A300ABEFB1 /* Disruption.swift */; };
+		FBAE78B91E00021800870C02 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD78EA61CF6D7AE004C2D3E /* MenuTableViewCell.swift */; };
+		FBAE78BA1E00021800870C02 /* UIAlertController+Checkboxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE182AD1D000AAA00C9F6A8 /* UIAlertController+Checkboxes.swift */; };
+		FBAE78BB1E00021800870C02 /* ProgressHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB482C6E1D531A7200F041B7 /* ProgressHelper.swift */; };
+		FBAE78BC1E00021800870C02 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFA25561CF6F3C900ABEFB1 /* CardTableViewCell.swift */; };
+		FBAE78BD1E00021800870C02 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06DF221D3F9459004292A2 /* RegisterViewController.swift */; };
+		FBAE78BE1E00021800870C02 /* UINavigationBar+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB115C551D08646A002AF926 /* UINavigationBar+Theme.swift */; };
+		FBAE78BF1E00021800870C02 /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFB41ED1CF708AD008AE53C /* UIColor+Theme.swift */; };
+		FBAE78C01E00021800870C02 /* LastUpdatedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D74A51D05CE3C0023B7A3 /* LastUpdatedHeaderView.swift */; };
+		FBAE78C11E00021800870C02 /* MainSegmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3560D81D9133250010B37B /* MainSegmentsViewController.swift */; };
+		FBAE78C21E00021800870C02 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4D7611D3D087E00882446 /* Auth.swift */; };
+		FBAE78C31E00021800870C02 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8EDE581CFC3C8D00E582C5 /* InfoTableViewCell.swift */; };
+		FBAE78C41E00021800870C02 /* UIFont+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB82D7131CF70CBD00F72E26 /* UIFont+Theme.swift */; };
+		FBAE78C81E00021800870C02 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB06DF231D3F9459004292A2 /* RegisterViewController.xib */; };
+		FBAE78C91E00021800870C02 /* MainSegmentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3560D91D9133250010B37B /* MainSegmentsViewController.xib */; };
+		FBAE78CA1E00021800870C02 /* closedDisruptionsTest.json in Resources */ = {isa = PBXBuildFile; fileRef = FB5E81D51D17D09D0052F9C0 /* closedDisruptionsTest.json */; };
+		FBAE78CD1E00021800870C02 /* DisruptionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB8EDE4F1CFC29E000E582C5 /* DisruptionDetailViewController.xib */; };
+		FBAE78CE1E00021800870C02 /* DisruptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB2DCCA31CF5BB5B001A85D4 /* DisruptionsViewController.xib */; };
+		FBAE78CF1E00021800870C02 /* CheckboxesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3B70C01CFDD1A0001C902E /* CheckboxesViewController.xib */; };
+		FBAE78D01E00021800870C02 /* refreshTokenTest.json in Resources */ = {isa = PBXBuildFile; fileRef = FBE405401D479213008D7DE9 /* refreshTokenTest.json */; };
+		FBAE78D31E00021800870C02 /* registerForPushTest.json in Resources */ = {isa = PBXBuildFile; fileRef = FBE405421D4793CD008D7DE9 /* registerForPushTest.json */; };
+		FBAE78D41E00021800870C02 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB8EDE6B1CFD70DF00E582C5 /* Localizable.strings */; };
+		FBAE78D51E00021800870C02 /* OnOffViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB115C4E1D07FAE5002AF926 /* OnOffViewController.xib */; };
+		FBAE78D81E00021800870C02 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB42FB5E1D1BD39E0034A367 /* InfoViewController.xib */; };
+		FBAE78D91E00021800870C02 /* registerUserTest.json in Resources */ = {isa = PBXBuildFile; fileRef = FB0620421D3CCED100F21DC0 /* registerUserTest.json */; };
+		FBAE78DA1E00021800870C02 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9394E51CF5D1480047EF7E /* MenuViewController.xib */; };
+		FBB73B9D1E016AD30099E9EC /* locationsTestPublic.json in Resources */ = {isa = PBXBuildFile; fileRef = FBB73B9C1E016AD30099E9EC /* locationsTestPublic.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED8BA2C421DCC2DB00FE8BFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB634C3B1CF5B10E004BA67C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBAE789B1E00021800870C02;
+			remoteInfo = EFLASH;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04F0E6095CFC7548F0BEF878 /* Pods-EZOEFDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZOEFDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZOEFDemo/Pods-EZOEFDemo.release.xcconfig"; sourceTree = "<group>"; };
+		05A26C590C221C9D931FFD20 /* Pods-EZOEFACC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZOEFACC.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZOEFACC/Pods-EZOEFACC.release.xcconfig"; sourceTree = "<group>"; };
+		1D5501C42416455A00D544C2 /* Profile+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Update.swift"; sourceTree = "<group>"; };
+		1D5501C724165BD300D544C2 /* LocationsTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTree.swift; sourceTree = "<group>"; };
+		1DD1C0DC8D0267CBFC01B48C /* Pods-EZOEFDemo.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZOEFDemo.testflight.xcconfig"; path = "Pods/Target Support Files/Pods-EZOEFDemo/Pods-EZOEFDemo.testflight.xcconfig"; sourceTree = "<group>"; };
+		1DEC096220ECF609003D32E7 /* ROsanswebtextbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ROsanswebtextbold.ttf; sourceTree = "<group>"; };
+		1DEC096320ECF609003D32E7 /* ROsanswebtextitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ROsanswebtextitalic.ttf; sourceTree = "<group>"; };
+		1DEC096420ECF609003D32E7 /* ROsanswebtextregular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ROsanswebtextregular.ttf; sourceTree = "<group>"; };
+		236065FBF28D3450B1A85D8B /* Pods-EZOEF.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZOEF.testflight.xcconfig"; path = "Pods/Target Support Files/Pods-EZOEF/Pods-EZOEF.testflight.xcconfig"; sourceTree = "<group>"; };
+		237A0BCEBE4C2B4131ADD4B4 /* Pods_EZOEFUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZOEFUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D80BF6B18A046DB61C314C4 /* Pods-EZOEFUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZOEFUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZOEFUITests/Pods-EZOEFUITests.release.xcconfig"; sourceTree = "<group>"; };
+		33E3B782D95FB597B7DF26AC /* Pods-EFLASH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFLASH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFLASH/Pods-EFLASH.debug.xcconfig"; sourceTree = "<group>"; };
+		34F81ED484DAA32C4C6B921B /* Pods-EFLASHDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFLASHDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFLASHDemo/Pods-EFLASHDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		357A1B19416EF8A0A5744E4A /* Pods-EFLASHDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFLASHDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EFLASHDemo/Pods-EFLASHDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4CF4C34E22D2ED9233C698B1 /* Pods-EZOEFDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZOEFDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZOEFDemo/Pods-EZOEFDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		6178AE851D4F567F008E1074 /* AppAnalyticsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppAnalyticsUtil.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		619E5E7B1E277D520065DC9C /* EFLASH-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EFLASH-Info.plist"; sourceTree = "<group>"; };
+		6B91B4123AD92236C35AC2E9 /* Pods-EFLASH.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFLASH.testflight.xcconfig"; path = "Pods/Target Support Files/Pods-EFLASH/Pods-EFLASH.testflight.xcconfig"; sourceTree = "<group>"; };
+		6EDBBA55F372F1B716A51FFB /* Pods_EZOEFDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZOEFDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F7C3314E9E599A366DA1F0F /* Pods-EZOEF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZOEF.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZOEF/Pods-EZOEF.release.xcconfig"; sourceTree = "<group>"; };
+		7DFDE6F6C8D4BF1DD00E49E5 /* Pods-EZOEFACC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZOEFACC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZOEFACC/Pods-EZOEFACC.debug.xcconfig"; sourceTree = "<group>"; };
+		8678440A910EBD8E8498274D /* Pods_EFLASHDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFLASHDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D60564BD6AB909B150C34FC /* Pods_EFLASH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFLASH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E7A3E0E010CCC704771693C /* Pods-EZOEF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZOEF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZOEF/Pods-EZOEF.debug.xcconfig"; sourceTree = "<group>"; };
+		97E2DF55E7038ACB88EC9492 /* Pods-EZOEFUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZOEFUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZOEFUITests/Pods-EZOEFUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9AE25894F2921FC717D94722 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD34C439605A6F1F0243D5C0 /* Pods-EZOEFACC.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZOEFACC.testflight.xcconfig"; path = "Pods/Target Support Files/Pods-EZOEFACC/Pods-EZOEFACC.testflight.xcconfig"; sourceTree = "<group>"; };
+		C51A5BA3E050487813515392 /* Pods-EFLASH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFLASH.release.xcconfig"; path = "Pods/Target Support Files/Pods-EFLASH/Pods-EFLASH.release.xcconfig"; sourceTree = "<group>"; };
+		C6A2AD69996EF473F5D2BF0A /* Pods-EZOEFUITests.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZOEFUITests.testflight.xcconfig"; path = "Pods/Target Support Files/Pods-EZOEFUITests/Pods-EZOEFUITests.testflight.xcconfig"; sourceTree = "<group>"; };
+		CD7A99A7030EC65E5405FCB5 /* Pods_EZOEF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZOEF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D9267421FEED1000B8E94F /* Launch Screen EFlash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen EFlash.storyboard"; sourceTree = "<group>"; };
+		D2D9267721FF071700B8E94F /* Launch Screen EZoef.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen EZoef.storyboard"; sourceTree = "<group>"; };
+		DCADB0BCDC5026BF5F822466 /* Pods_EZOEFACC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZOEFACC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA5A17709EE14E389E03331 /* Pods-EFLASHDemo.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFLASHDemo.testflight.xcconfig"; path = "Pods/Target Support Files/Pods-EFLASHDemo/Pods-EFLASHDemo.testflight.xcconfig"; sourceTree = "<group>"; };
+		ED8BA2BF21DCC2DB00FE8BFF /* EFLASHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EFLASHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED8BA2C121DCC2DB00FE8BFF /* EFLASHTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFLASHTests.swift; sourceTree = "<group>"; };
+		ED8BA2C321DCC2DB00FE8BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB0620421D3CCED100F21DC0 /* registerUserTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = registerUserTest.json; sourceTree = SOURCE_ROOT; };
+		FB06DF221D3F9459004292A2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB06DF231D3F9459004292A2 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		FB115C4C1D07FAC9002AF926 /* OnOffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OnOffViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB115C4E1D07FAE5002AF926 /* OnOffViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnOffViewController.xib; sourceTree = "<group>"; };
+		FB115C511D07FBD6002AF926 /* UIAlertController+OnOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+OnOff.swift"; sourceTree = "<group>"; };
+		FB115C531D081645002AF926 /* NoRecordsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoRecordsTableViewCell.swift; sourceTree = "<group>"; };
+		FB115C551D08646A002AF926 /* UINavigationBar+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Theme.swift"; sourceTree = "<group>"; };
+		FB1D74A01D05712F0023B7A3 /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Update.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB1D74A21D057F140023B7A3 /* openDisruptionsTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = openDisruptionsTest.json; sourceTree = SOURCE_ROOT; };
+		FB1D74A51D05CE3C0023B7A3 /* LastUpdatedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LastUpdatedHeaderView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB1D74A71D06BFAA0023B7A3 /* locationsTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locationsTest.json; sourceTree = SOURCE_ROOT; };
+		FB2B577E1F0A45A5005BF738 /* NotificationUpdatesSwitchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationUpdatesSwitchesViewController.swift; sourceTree = "<group>"; };
+		FB2B577F1F0A45A5005BF738 /* NotificationUpdatesSwitchesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationUpdatesSwitchesViewController.xib; sourceTree = "<group>"; };
+		FB2B57891F0A4EC7005BF738 /* UIAlertController+NotificationsUpdatesOnOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+NotificationsUpdatesOnOff.swift"; sourceTree = "<group>"; };
+		FB2DCCA31CF5BB5B001A85D4 /* DisruptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisruptionsViewController.xib; sourceTree = "<group>"; };
+		FB2DCCA51CF5BD19001A85D4 /* DisruptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DisruptionsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB3560D81D9133250010B37B /* MainSegmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MainSegmentsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB3560D91D9133250010B37B /* MainSegmentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainSegmentsViewController.xib; sourceTree = "<group>"; };
+		FB3AA354206D1494004A0934 /* CopyableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyableLabel.swift; sourceTree = "<group>"; };
+		FB3B70B81CFD9AA7001C902E /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Profile.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB3B70BA1CFD9B07001C902E /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Service.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB3B70BC1CFD9C27001C902E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Location.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB3B70BF1CFDD1A0001C902E /* CheckboxesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CheckboxesViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB3B70C01CFDD1A0001C902E /* CheckboxesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckboxesViewController.xib; sourceTree = "<group>"; };
+		FB42FB5D1D1BD39E0034A367 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = InfoViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB42FB5E1D1BD39E0034A367 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		FB42FB621D1BDDE80034A367 /* UIAlertController+Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Info.swift"; sourceTree = "<group>"; };
+		FB482C6E1D531A7200F041B7 /* ProgressHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHelper.swift; sourceTree = "<group>"; };
+		FB5387BE1D3F91C200CEB0B5 /* UIAlertController+AuthError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AuthError.swift"; sourceTree = "<group>"; };
+		FB576DBD1E0026A1005CF56F /* EFLASH.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = EFLASH.entitlements; sourceTree = "<group>"; };
+		FB5E81D31D12D4F50052F9C0 /* UIAlertController+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Error.swift"; sourceTree = "<group>"; };
+		FB5E81D51D17D09D0052F9C0 /* closedDisruptionsTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = closedDisruptionsTest.json; sourceTree = SOURCE_ROOT; };
+		FB634C461CF5B10E004BA67C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB634C4D1CF5B10E004BA67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB82D7131CF70CBD00F72E26 /* UIFont+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Theme.swift"; sourceTree = "<group>"; };
+		FB8EDE4D1CFC29D100E582C5 /* DisruptionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DisruptionDetailViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB8EDE4F1CFC29E000E582C5 /* DisruptionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisruptionDetailViewController.xib; sourceTree = "<group>"; };
+		FB8EDE521CFC2BFC00E582C5 /* DetailHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DetailHeaderView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB8EDE541CFC2D7100E582C5 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = GradientView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB8EDE561CFC374100E582C5 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MainTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB8EDE581CFC3C8D00E582C5 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = InfoTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB8EDE5A1CFC531000E582C5 /* SectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		FB8EDE5C1CFC630300E582C5 /* ApiConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ApiConnector.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB8EDE5F1CFC8F5400E582C5 /* NSDate+RelativeTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+RelativeTime.swift"; sourceTree = "<group>"; };
+		FB9394E41CF5D1480047EF7E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MenuViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FB9394E51CF5D1480047EF7E /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		FB9394E91CF5D2850047EF7E /* MenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MenuHeaderView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FBA146BC207395C000B10E4B /* NSDate+ReadableDateTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ReadableDateTime.swift"; sourceTree = "<group>"; };
+		FBA4D7611D3D087E00882446 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Auth.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FBA695301E02A56300629E56 /* openDisruptionsTestPublic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = openDisruptionsTestPublic.json; sourceTree = SOURCE_ROOT; };
+		FBAE78E31E00021800870C02 /* EFLASH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EFLASH.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBB73B9C1E016AD30099E9EC /* locationsTestPublic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locationsTestPublic.json; sourceTree = SOURCE_ROOT; };
+		FBD78EA61CF6D7AE004C2D3E /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MenuTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FBE182AD1D000AAA00C9F6A8 /* UIAlertController+Checkboxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Checkboxes.swift"; sourceTree = "<group>"; };
+		FBE2B3371D10030C008175D4 /* String+HtmlEncoded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HtmlEncoded.swift"; sourceTree = "<group>"; };
+		FBE405401D479213008D7DE9 /* refreshTokenTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = refreshTokenTest.json; sourceTree = SOURCE_ROOT; };
+		FBE405421D4793CD008D7DE9 /* registerForPushTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = registerForPushTest.json; sourceTree = SOURCE_ROOT; };
+		FBFA25531CF6F1A300ABEFB1 /* Disruption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Disruption.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FBFA25561CF6F3C900ABEFB1 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CardTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FBFB41ED1CF708AD008AE53C /* UIColor+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
+		FBFBF93C1CFD826300D6F430 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED8BA2BC21DCC2DB00FE8BFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBAE78C51E00021800870C02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E063DF7FFA854DD8BABE7487 /* Pods_EFLASH.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6178AE841D4F5624008E1074 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6178AE851D4F567F008E1074 /* AppAnalyticsUtil.swift */,
+				FB482C6E1D531A7200F041B7 /* ProgressHelper.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		D698A885CD6B29DB90B4298B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AE25894F2921FC717D94722 /* Pods.framework */,
+				CD7A99A7030EC65E5405FCB5 /* Pods_EZOEF.framework */,
+				237A0BCEBE4C2B4131ADD4B4 /* Pods_EZOEFUITests.framework */,
+				8D60564BD6AB909B150C34FC /* Pods_EFLASH.framework */,
+				6EDBBA55F372F1B716A51FFB /* Pods_EZOEFDemo.framework */,
+				8678440A910EBD8E8498274D /* Pods_EFLASHDemo.framework */,
+				DCADB0BCDC5026BF5F822466 /* Pods_EZOEFACC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E516FAE92B45E20227DBFC81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97E2DF55E7038ACB88EC9492 /* Pods-EZOEFUITests.debug.xcconfig */,
+				2D80BF6B18A046DB61C314C4 /* Pods-EZOEFUITests.release.xcconfig */,
+				8E7A3E0E010CCC704771693C /* Pods-EZOEF.debug.xcconfig */,
+				6F7C3314E9E599A366DA1F0F /* Pods-EZOEF.release.xcconfig */,
+				33E3B782D95FB597B7DF26AC /* Pods-EFLASH.debug.xcconfig */,
+				C51A5BA3E050487813515392 /* Pods-EFLASH.release.xcconfig */,
+				4CF4C34E22D2ED9233C698B1 /* Pods-EZOEFDemo.debug.xcconfig */,
+				04F0E6095CFC7548F0BEF878 /* Pods-EZOEFDemo.release.xcconfig */,
+				34F81ED484DAA32C4C6B921B /* Pods-EFLASHDemo.debug.xcconfig */,
+				357A1B19416EF8A0A5744E4A /* Pods-EFLASHDemo.release.xcconfig */,
+				6B91B4123AD92236C35AC2E9 /* Pods-EFLASH.testflight.xcconfig */,
+				EBA5A17709EE14E389E03331 /* Pods-EFLASHDemo.testflight.xcconfig */,
+				236065FBF28D3450B1A85D8B /* Pods-EZOEF.testflight.xcconfig */,
+				7DFDE6F6C8D4BF1DD00E49E5 /* Pods-EZOEFACC.debug.xcconfig */,
+				AD34C439605A6F1F0243D5C0 /* Pods-EZOEFACC.testflight.xcconfig */,
+				05A26C590C221C9D931FFD20 /* Pods-EZOEFACC.release.xcconfig */,
+				1DD1C0DC8D0267CBFC01B48C /* Pods-EZOEFDemo.testflight.xcconfig */,
+				C6A2AD69996EF473F5D2BF0A /* Pods-EZOEFUITests.testflight.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED8BA2C021DCC2DB00FE8BFF /* EFLASHTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED8BA2C121DCC2DB00FE8BFF /* EFLASHTests.swift */,
+				ED8BA2C321DCC2DB00FE8BFF /* Info.plist */,
+			);
+			path = EFLASHTests;
+			sourceTree = "<group>";
+		};
+		FB06DF261D3F945D004292A2 /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB06DF221D3F9459004292A2 /* RegisterViewController.swift */,
+				FB06DF231D3F9459004292A2 /* RegisterViewController.xib */,
+			);
+			name = RegisterViewController;
+			sourceTree = "<group>";
+		};
+		FB115C501D07FBA2002AF926 /* OnOffViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB115C4C1D07FAC9002AF926 /* OnOffViewController.swift */,
+				FB115C4E1D07FAE5002AF926 /* OnOffViewController.xib */,
+			);
+			name = OnOffViewController;
+			sourceTree = "<group>";
+		};
+		FB1D74A41D057F170023B7A3 /* Test JSON */ = {
+			isa = PBXGroup;
+			children = (
+				FB1D74A21D057F140023B7A3 /* openDisruptionsTest.json */,
+				FBA695301E02A56300629E56 /* openDisruptionsTestPublic.json */,
+				FB5E81D51D17D09D0052F9C0 /* closedDisruptionsTest.json */,
+				FB1D74A71D06BFAA0023B7A3 /* locationsTest.json */,
+				FBB73B9C1E016AD30099E9EC /* locationsTestPublic.json */,
+				FB0620421D3CCED100F21DC0 /* registerUserTest.json */,
+				FBE405421D4793CD008D7DE9 /* registerForPushTest.json */,
+				FBE405401D479213008D7DE9 /* refreshTokenTest.json */,
+			);
+			name = "Test JSON";
+			sourceTree = "<group>";
+		};
+		FB2B57881F0A45B5005BF738 /* NotificationUpdatesSwitchesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB2B577E1F0A45A5005BF738 /* NotificationUpdatesSwitchesViewController.swift */,
+				FB2B577F1F0A45A5005BF738 /* NotificationUpdatesSwitchesViewController.xib */,
+			);
+			name = NotificationUpdatesSwitchesViewController;
+			sourceTree = "<group>";
+		};
+		FB2DCCA21CF5BB48001A85D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB3AA354206D1494004A0934 /* CopyableLabel.swift */,
+				FB8EDE541CFC2D7100E582C5 /* GradientView.swift */,
+				FB8EDE5A1CFC531000E582C5 /* SectionHeaderView.swift */,
+				FB8EDE521CFC2BFC00E582C5 /* DetailHeaderView.swift */,
+				FB9394E91CF5D2850047EF7E /* MenuHeaderView.swift */,
+				FB1D74A51D05CE3C0023B7A3 /* LastUpdatedHeaderView.swift */,
+				FB8EDE561CFC374100E582C5 /* MainTableViewCell.swift */,
+				FB8EDE581CFC3C8D00E582C5 /* InfoTableViewCell.swift */,
+				FBD78EA61CF6D7AE004C2D3E /* MenuTableViewCell.swift */,
+				FBFA25561CF6F3C900ABEFB1 /* CardTableViewCell.swift */,
+				FB115C531D081645002AF926 /* NoRecordsTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FB3560DC1D91332A0010B37B /* MainSegmentsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB3560D81D9133250010B37B /* MainSegmentsViewController.swift */,
+				FB3560D91D9133250010B37B /* MainSegmentsViewController.xib */,
+			);
+			name = MainSegmentsViewController;
+			sourceTree = "<group>";
+		};
+		FB3B70BE1CFD9E0E001C902E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FB3B70B81CFD9AA7001C902E /* Profile.swift */,
+				1D5501C42416455A00D544C2 /* Profile+Update.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		FB3B70C31CFDD1A7001C902E /* CheckboxesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB3B70BF1CFDD1A0001C902E /* CheckboxesViewController.swift */,
+				FB3B70C01CFDD1A0001C902E /* CheckboxesViewController.xib */,
+			);
+			name = CheckboxesViewController;
+			sourceTree = "<group>";
+		};
+		FB42FB611D1BD3A50034A367 /* InfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB42FB5D1D1BD39E0034A367 /* InfoViewController.swift */,
+				FB42FB5E1D1BD39E0034A367 /* InfoViewController.xib */,
+			);
+			name = InfoViewController;
+			sourceTree = "<group>";
+		};
+		FB634C3A1CF5B10E004BA67C = {
+			isa = PBXGroup;
+			children = (
+				FB634C451CF5B10E004BA67C /* EZOEF */,
+				ED8BA2C021DCC2DB00FE8BFF /* EFLASHTests */,
+				FB634C441CF5B10E004BA67C /* Products */,
+				D698A885CD6B29DB90B4298B /* Frameworks */,
+				E516FAE92B45E20227DBFC81 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		FB634C441CF5B10E004BA67C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBAE78E31E00021800870C02 /* EFLASH.app */,
+				ED8BA2BF21DCC2DB00FE8BFF /* EFLASHTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB634C451CF5B10E004BA67C /* EZOEF */ = {
+			isa = PBXGroup;
+			children = (
+				619E5E7B1E277D520065DC9C /* EFLASH-Info.plist */,
+				FB576DBD1E0026A1005CF56F /* EFLASH.entitlements */,
+				6178AE841D4F5624008E1074 /* Utils */,
+				FB3B70BE1CFD9E0E001C902E /* Profile */,
+				FB8EDE5E1CFC630700E582C5 /* Api */,
+				FBFB41EF1CF708B5008AE53C /* Extensions */,
+				FBFA25551CF6F1AA00ABEFB1 /* Models */,
+				FB2DCCA21CF5BB48001A85D4 /* Views */,
+				FB82D7161CF70EBD00F72E26 /* ViewControllers */,
+				FB9394EF1CF5D2F60047EF7E /* Fonts */,
+				FB1D74A41D057F170023B7A3 /* Test JSON */,
+				FB634C4D1CF5B10E004BA67C /* Assets.xcassets */,
+				D2D9267721FF071700B8E94F /* Launch Screen EZoef.storyboard */,
+				D2D9267421FEED1000B8E94F /* Launch Screen EFlash.storyboard */,
+				FB8EDE6B1CFD70DF00E582C5 /* Localizable.strings */,
+				FB634C461CF5B10E004BA67C /* AppDelegate.swift */,
+			);
+			path = EZOEF;
+			sourceTree = "<group>";
+		};
+		FB82D7151CF70EA900F72E26 /* DisruptionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB2DCCA51CF5BD19001A85D4 /* DisruptionsViewController.swift */,
+				FB2DCCA31CF5BB5B001A85D4 /* DisruptionsViewController.xib */,
+			);
+			name = DisruptionsViewController;
+			sourceTree = "<group>";
+		};
+		FB82D7161CF70EBD00F72E26 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB9394E81CF5D14C0047EF7E /* MenuViewController */,
+				FB3560DC1D91332A0010B37B /* MainSegmentsViewController */,
+				FB82D7151CF70EA900F72E26 /* DisruptionsViewController */,
+				FB8EDE511CFC29EE00E582C5 /* DisruptionDetailViewController */,
+				FB2B57881F0A45B5005BF738 /* NotificationUpdatesSwitchesViewController */,
+				FB115C501D07FBA2002AF926 /* OnOffViewController */,
+				FB3B70C31CFDD1A7001C902E /* CheckboxesViewController */,
+				FB42FB611D1BD3A50034A367 /* InfoViewController */,
+				FB06DF261D3F945D004292A2 /* RegisterViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FB8EDE511CFC29EE00E582C5 /* DisruptionDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB8EDE4D1CFC29D100E582C5 /* DisruptionDetailViewController.swift */,
+				FB8EDE4F1CFC29E000E582C5 /* DisruptionDetailViewController.xib */,
+			);
+			name = DisruptionDetailViewController;
+			sourceTree = "<group>";
+		};
+		FB8EDE5E1CFC630700E582C5 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				FB8EDE5C1CFC630300E582C5 /* ApiConnector.swift */,
+				FBA4D7611D3D087E00882446 /* Auth.swift */,
+			);
+			name = Api;
+			sourceTree = "<group>";
+		};
+		FB9394E81CF5D14C0047EF7E /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB9394E41CF5D1480047EF7E /* MenuViewController.swift */,
+				FB9394E51CF5D1480047EF7E /* MenuViewController.xib */,
+			);
+			name = MenuViewController;
+			sourceTree = "<group>";
+		};
+		FB9394EF1CF5D2F60047EF7E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1DEC096220ECF609003D32E7 /* ROsanswebtextbold.ttf */,
+				1DEC096320ECF609003D32E7 /* ROsanswebtextitalic.ttf */,
+				1DEC096420ECF609003D32E7 /* ROsanswebtextregular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		FBFA25551CF6F1AA00ABEFB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FBFA25531CF6F1A300ABEFB1 /* Disruption.swift */,
+				1D5501C724165BD300D544C2 /* LocationsTree.swift */,
+				FB1D74A01D05712F0023B7A3 /* Update.swift */,
+				FB3B70BC1CFD9C27001C902E /* Location.swift */,
+				FB3B70BA1CFD9B07001C902E /* Service.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FBFB41EF1CF708B5008AE53C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FBFB41ED1CF708AD008AE53C /* UIColor+Theme.swift */,
+				FB82D7131CF70CBD00F72E26 /* UIFont+Theme.swift */,
+				FB115C551D08646A002AF926 /* UINavigationBar+Theme.swift */,
+				FB8EDE5F1CFC8F5400E582C5 /* NSDate+RelativeTime.swift */,
+				FBA146BC207395C000B10E4B /* NSDate+ReadableDateTime.swift */,
+				FBE182AD1D000AAA00C9F6A8 /* UIAlertController+Checkboxes.swift */,
+				FB115C511D07FBD6002AF926 /* UIAlertController+OnOff.swift */,
+				FB42FB621D1BDDE80034A367 /* UIAlertController+Info.swift */,
+				FB2B57891F0A4EC7005BF738 /* UIAlertController+NotificationsUpdatesOnOff.swift */,
+				FB5E81D31D12D4F50052F9C0 /* UIAlertController+Error.swift */,
+				FB5387BE1D3F91C200CEB0B5 /* UIAlertController+AuthError.swift */,
+				FBE2B3371D10030C008175D4 /* String+HtmlEncoded.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED8BA2BE21DCC2DB00FE8BFF /* EFLASHTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED8BA2C921DCC2DB00FE8BFF /* Build configuration list for PBXNativeTarget "EFLASHTests" */;
+			buildPhases = (
+				ED8BA2BB21DCC2DB00FE8BFF /* Sources */,
+				ED8BA2BC21DCC2DB00FE8BFF /* Frameworks */,
+				ED8BA2BD21DCC2DB00FE8BFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED8BA2C521DCC2DB00FE8BFF /* PBXTargetDependency */,
+			);
+			name = EFLASHTests;
+			productName = EFLASHTests;
+			productReference = ED8BA2BF21DCC2DB00FE8BFF /* EFLASHTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FBAE789B1E00021800870C02 /* EFLASH */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBAE78E01E00021800870C02 /* Build configuration list for PBXNativeTarget "EFLASH" */;
+			buildPhases = (
+				FBAE789D1E00021800870C02 /* [CP] Check Pods Manifest.lock */,
+				FBAE789E1E00021800870C02 /* Sources */,
+				FBAE78C51E00021800870C02 /* Frameworks */,
+				FBAE78C71E00021800870C02 /* Resources */,
+				FBAE78DB1E00021800870C02 /* [CP] Embed Pods Frameworks */,
+				FBAE78DD1E00021800870C02 /* 📦 Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EFLASH;
+			productName = EZOEF;
+			productReference = FBAE78E31E00021800870C02 /* EFLASH.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB634C3B1CF5B10E004BA67C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = DICTU;
+				TargetAttributes = {
+					ED8BA2BE21DCC2DB00FE8BFF = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = DPFGWEUENY;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FBAE789B1E00021800870C02;
+					};
+					FBAE789B1E00021800870C02 = {
+						DevelopmentTeam = DPFGWEUENY;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = FB634C3E1CF5B10E004BA67C /* Build configuration list for PBXProject "EZOEF" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Base,
+				nl,
+			);
+			mainGroup = FB634C3A1CF5B10E004BA67C;
+			productRefGroup = FB634C441CF5B10E004BA67C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBAE789B1E00021800870C02 /* EFLASH */,
+				ED8BA2BE21DCC2DB00FE8BFF /* EFLASHTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED8BA2BD21DCC2DB00FE8BFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBAE78C71E00021800870C02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBAE78C81E00021800870C02 /* RegisterViewController.xib in Resources */,
+				FBAE78C91E00021800870C02 /* MainSegmentsViewController.xib in Resources */,
+				D2D9267521FEED1000B8E94F /* Launch Screen EFlash.storyboard in Resources */,
+				1DEC096920ECF60F003D32E7 /* ROsanswebtextbold.ttf in Resources */,
+				FBAE78CA1E00021800870C02 /* closedDisruptionsTest.json in Resources */,
+				D2D9267321FEE63800B8E94F /* Assets.xcassets in Resources */,
+				FBA695311E02A56300629E56 /* openDisruptionsTestPublic.json in Resources */,
+				FBAE78CD1E00021800870C02 /* DisruptionDetailViewController.xib in Resources */,
+				FBAE78CE1E00021800870C02 /* DisruptionsViewController.xib in Resources */,
+				FBAE78CF1E00021800870C02 /* CheckboxesViewController.xib in Resources */,
+				FBAE78D01E00021800870C02 /* refreshTokenTest.json in Resources */,
+				1DEC096C20ECF613003D32E7 /* ROsanswebtextitalic.ttf in Resources */,
+				FBAE78D31E00021800870C02 /* registerForPushTest.json in Resources */,
+				1DEC096F20ECF617003D32E7 /* ROsanswebtextregular.ttf in Resources */,
+				FB2B57861F0A45A5005BF738 /* NotificationUpdatesSwitchesViewController.xib in Resources */,
+				FBAE78D41E00021800870C02 /* Localizable.strings in Resources */,
+				FBAE78D51E00021800870C02 /* OnOffViewController.xib in Resources */,
+				FBAE78D81E00021800870C02 /* InfoViewController.xib in Resources */,
+				FBAE78D91E00021800870C02 /* registerUserTest.json in Resources */,
+				FBAE78DA1E00021800870C02 /* MenuViewController.xib in Resources */,
+				FBB73B9D1E016AD30099E9EC /* locationsTestPublic.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FBAE789D1E00021800870C02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EFLASH-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBAE78DB1E00021800870C02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EFLASH/Pods-EFLASH-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Countly/Countly.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/GradientCircularProgress/GradientCircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework",
+				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Countly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientCircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYDrawerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EFLASH/Pods-EFLASH-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBAE78DD1E00021800870C02 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EFLASH/Pods-EFLASH-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED8BA2BB21DCC2DB00FE8BFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED8BA2C221DCC2DB00FE8BFF /* EFLASHTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBAE789E1E00021800870C02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBAE789F1E00021800870C02 /* MainTableViewCell.swift in Sources */,
+				FBAE78A01E00021800870C02 /* OnOffViewController.swift in Sources */,
+				FBAE78A11E00021800870C02 /* NoRecordsTableViewCell.swift in Sources */,
+				FBAE78A21E00021800870C02 /* UIAlertController+AuthError.swift in Sources */,
+				FBAE78A31E00021800870C02 /* UIAlertController+Error.swift in Sources */,
+				FBAE78A41E00021800870C02 /* DisruptionDetailViewController.swift in Sources */,
+				FBAE78A51E00021800870C02 /* InfoViewController.swift in Sources */,
+				FBAE78A61E00021800870C02 /* Location.swift in Sources */,
+				FBAE78A71E00021800870C02 /* AppAnalyticsUtil.swift in Sources */,
+				FB2B578C1F0A4EC7005BF738 /* UIAlertController+NotificationsUpdatesOnOff.swift in Sources */,
+				FBAE78A81E00021800870C02 /* ApiConnector.swift in Sources */,
+				FBAE78A91E00021800870C02 /* UIAlertController+Info.swift in Sources */,
+				FBAE78AA1E00021800870C02 /* DetailHeaderView.swift in Sources */,
+				FBAE78AB1E00021800870C02 /* GradientView.swift in Sources */,
+				FBAE78AC1E00021800870C02 /* MenuHeaderView.swift in Sources */,
+				FB3AA356206D1533004A0934 /* CopyableLabel.swift in Sources */,
+				FBAE78AD1E00021800870C02 /* String+HtmlEncoded.swift in Sources */,
+				FBAE78AE1E00021800870C02 /* DisruptionsViewController.swift in Sources */,
+				FBAE78AF1E00021800870C02 /* Update.swift in Sources */,
+				FBAE78B01E00021800870C02 /* Profile.swift in Sources */,
+				FBAE78B11E00021800870C02 /* NSDate+RelativeTime.swift in Sources */,
+				FBAE78B21E00021800870C02 /* MenuViewController.swift in Sources */,
+				FBAE78B31E00021800870C02 /* UIAlertController+OnOff.swift in Sources */,
+				FBAE78B41E00021800870C02 /* Service.swift in Sources */,
+				FBAE78B51E00021800870C02 /* SectionHeaderView.swift in Sources */,
+				FBAE78B61E00021800870C02 /* AppDelegate.swift in Sources */,
+				FBAE78B71E00021800870C02 /* CheckboxesViewController.swift in Sources */,
+				FBAE78B81E00021800870C02 /* Disruption.swift in Sources */,
+				FBAE78B91E00021800870C02 /* MenuTableViewCell.swift in Sources */,
+				FBAE78BA1E00021800870C02 /* UIAlertController+Checkboxes.swift in Sources */,
+				1D5501C924165BD300D544C2 /* LocationsTree.swift in Sources */,
+				FBAE78BB1E00021800870C02 /* ProgressHelper.swift in Sources */,
+				FBAE78BC1E00021800870C02 /* CardTableViewCell.swift in Sources */,
+				FBAE78BD1E00021800870C02 /* RegisterViewController.swift in Sources */,
+				FBA146BF207395C000B10E4B /* NSDate+ReadableDateTime.swift in Sources */,
+				FBAE78BE1E00021800870C02 /* UINavigationBar+Theme.swift in Sources */,
+				FBAE78BF1E00021800870C02 /* UIColor+Theme.swift in Sources */,
+				FBAE78C01E00021800870C02 /* LastUpdatedHeaderView.swift in Sources */,
+				1D5501C62416455A00D544C2 /* Profile+Update.swift in Sources */,
+				FBAE78C11E00021800870C02 /* MainSegmentsViewController.swift in Sources */,
+				FBAE78C21E00021800870C02 /* Auth.swift in Sources */,
+				FBAE78C31E00021800870C02 /* InfoTableViewCell.swift in Sources */,
+				FBAE78C41E00021800870C02 /* UIFont+Theme.swift in Sources */,
+				FB2B57821F0A45A5005BF738 /* NotificationUpdatesSwitchesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED8BA2C521DCC2DB00FE8BFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBAE789B1E00021800870C02 /* EFLASH */;
+			targetProxy = ED8BA2C421DCC2DB00FE8BFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB8EDE6B1CFD70DF00E582C5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBFBF93C1CFD826300D6F430 /* nl */,
+			);
+			name = Localizable.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C84BAEB52174DB7300A87777 /* TestFlight */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"TESTFLIGHT=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "\"-D\" \"TESTFLIGHT\"";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = TestFlight;
+		};
+		C84BAEB82174DB7300A87777 /* TestFlight */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B91B4123AD92236C35AC2E9 /* Pods-EFLASH.testflight.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = EflashAppIcon;
+				CODE_SIGN_ENTITLEMENTS = EZOEF/EFLASH.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = DPFGWEUENY;
+				ENABLE_BITCODE = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				INFOPLIST_FILE = "EZOEF/EFLASH-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.0.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CryptoSwift\"",
+					"-framework",
+					"\"KYDrawerController\"",
+					"-framework",
+					"\"Locksmith\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"DEBUG\" -D TARGET_PUBLIC";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.minez.eovb.eflash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ac2c5b6a-0a79-486d-83fe-0012480fab88";
+				PROVISIONING_PROFILE_SPECIFIER = "nl.minez.eovb.eflash Development";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = TestFlight;
+		};
+		ED8BA2C621DCC2DB00FE8BFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DPFGWEUENY;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EFLASHTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minez.EFLASHTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EFLASH.app/EFLASH";
+			};
+			name = Debug;
+		};
+		ED8BA2C721DCC2DB00FE8BFF /* TestFlight */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DPFGWEUENY;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = EFLASHTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minez.EFLASHTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EFLASH.app/EFLASH";
+			};
+			name = TestFlight;
+		};
+		ED8BA2C821DCC2DB00FE8BFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DPFGWEUENY;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = EFLASHTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minez.EFLASHTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EFLASH.app/EFLASH";
+			};
+			name = Release;
+		};
+		FB634C691CF5B10E004BA67C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "\"-D\" \"DEBUG\"";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB634C6A1CF5B10E004BA67C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBAE78E11E00021800870C02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E3B782D95FB597B7DF26AC /* Pods-EFLASH.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = EflashAppIcon;
+				CODE_SIGN_ENTITLEMENTS = EZOEF/EFLASH.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = DPFGWEUENY;
+				ENABLE_BITCODE = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				INFOPLIST_FILE = "EZOEF/EFLASH-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.0.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CryptoSwift\"",
+					"-framework",
+					"\"KYDrawerController\"",
+					"-framework",
+					"\"Locksmith\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"DEBUG\" -D TARGET_PUBLIC";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.minez.eovb.eflash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ac2c5b6a-0a79-486d-83fe-0012480fab88";
+				PROVISIONING_PROFILE_SPECIFIER = "nl.minez.eovb.eflash Development";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		FBAE78E21E00021800870C02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C51A5BA3E050487813515392 /* Pods-EFLASH.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = EflashAppIcon;
+				CODE_SIGN_ENTITLEMENTS = EZOEF/EFLASH.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = DPFGWEUENY;
+				ENABLE_BITCODE = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				INFOPLIST_FILE = "EZOEF/EFLASH-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.0.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CryptoSwift\"",
+					"-framework",
+					"\"KYDrawerController\"",
+					"-framework",
+					"\"Locksmith\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"  -D TARGET_PUBLIC";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.minez.eovb.eflash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "eac40e6a-ba64-4d79-bfd8-93db49a99051";
+				PROVISIONING_PROFILE_SPECIFIER = "EFLASH Distribution";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED8BA2C921DCC2DB00FE8BFF /* Build configuration list for PBXNativeTarget "EFLASHTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED8BA2C621DCC2DB00FE8BFF /* Debug */,
+				ED8BA2C721DCC2DB00FE8BFF /* TestFlight */,
+				ED8BA2C821DCC2DB00FE8BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB634C3E1CF5B10E004BA67C /* Build configuration list for PBXProject "EZOEF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB634C691CF5B10E004BA67C /* Debug */,
+				C84BAEB52174DB7300A87777 /* TestFlight */,
+				FB634C6A1CF5B10E004BA67C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBAE78E01E00021800870C02 /* Build configuration list for PBXNativeTarget "EFLASH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBAE78E11E00021800870C02 /* Debug */,
+				C84BAEB82174DB7300A87777 /* TestFlight */,
+				FBAE78E21E00021800870C02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB634C3B1CF5B10E004BA67C /* Project object */;
+}

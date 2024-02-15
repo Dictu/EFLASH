@@ -1,0 +1,92 @@
+<!--
+ Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+ SPDX-License-Identifier: EUPL-1.2
+-->
+
+<resources>
+    <string name="app_name">EFLASH</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="slogan">Op weg naar een geïnformeerde gebruiker</string>
+    <string name="notification">Notificatie</string>
+    <string name="register">Registreer</string>
+    <string name="welcome_to_the_ezoef_app">Welkom bij de EZOEF app!\n\nOm de app te kunnen gebruiken dien je eerst te registreren met je zakelijke email adres.</string>
+    <string name="register_account">Registreren</string>
+    <string name="email">Email</string>
+    <string name="registrating">Registreren…</string>
+    <string name="registration_succesfull">Registratie succesvol</string>
+    <string name="activation_mail_sent">Je hebt een activatie email ontvangen!\nNadat je deze email hebt geactiveerd kun je EZOEF gebruiken.</string>
+    <string name="disruptions">Verstoringen</string>
+    <string name="open_disruptions">Verstoringen</string>
+    <string name="announcements">Mededelingen</string>
+    <string name="closed_disruptions">Opgeloste verstoringen</string>
+    <string name="latest_refresh_ps">Laatst bijgewerkt: %s</string>
+    <string name="details">Details</string>
+    <string name="no_locations">Geen meldingstypen</string>
+    <string name="no_services">Geen voorzieningen</string>
+    <string name="choose_one_or_more_services">Kies één of meerdere voorzieningen</string>
+    <string name="choose_one_or_more_locations">Kies één of meerdere meldingstypen</string>
+    <string name="choose_one_or_more_locations_for_each_service">Kies één of meerdere meldingstypen per voorziening.</string>
+    <string name="all">Alles</string>
+    <string name="none">Geen</string>
+    <string name="again">Opnieuw</string>
+    <string name="change_services">Voorzieningen wijzigen</string>
+    <string name="no_services_fetched">Er zijn nog geen voorzieningen opgehaald.\nControleer uw internetverbinding en probeer het opnieuw.</string>
+    <string name="no_connection">Geen verbinding mogelijk.\nControleer uw internetverbinding en probeer het opnieuw.</string>
+    <string name="change_locations">Meldingstypen wijzigen</string>
+    <string name="no_service_selected">U heeft nog geen voorziening gekozen.\nKies eerst één of meerdere voorzieningen.</string>
+    <string name="no_disruptions_found">Geen verstoringen gevonden!</string>
+    <string name="no_solved_disruptions_found">Er zijn op dit moment geen opgeloste verstoringen</string>
+    <string name="no_announcements_found">Er zijn op dit moment geen mededelingen</string>
+    <string name="receive_notifications">Notificaties ontvangen?</string>
+    <string name="push_notifications">Push notificaties</string>
+    <string name="info">Info</string>
+    <string name="info_ps" formatted="false"><![CDATA[
+    Opgeloste verstoringen zijn maximaal een week zichtbaar.<br><br>
+    Versie %s %s<br><br>
+    Voor meldingen en vragen:<br>
+    <a href=\'mailto:contact@e-overheidvoorbedrijven.nl\'>contact@e-overheidvoorbedrijven.nl</a><br><br>
+    Bellen op werkdagen tussen 9u en 17u (GMT+1):<br>
+    Tel: <a href=\'tel:31880424230\'>+31 88 0424230</a>
+    ]]></string>
+
+    <string name="accessibility">Toegankelijkheidsverklaring</string>
+    <string name="accessibility_url">https://www.toegankelijkheidsverklaring.nl/register/4730</string>
+    <string name="privacy">Privacy</string>
+    <string name="privacy_ps"><![CDATA[<p>Dictu, onderdeel van het Ministerie van Economische Zaken en Klimaat, hecht een groot belang aan de bescherming van uw privacy en de veiligheid van persoonsgegevens. Wij verzamelen alleen persoonsgegevens die noodzakelijk zijn voor het tonen van de apps van Dictu, onderdeel van het Ministerie van Economische Zaken en Klimaat, en de daarop aangeboden diensten. Deze persoonsgegevens worden verwerkt in overeenstemming met de Algemene Verordening Persoonsgegevens (AVG) en andere toepasselijke privacywetgeving.</p><a href="https://www.rijksoverheid.nl/ministeries/ministerie-van-economische-zaken-en-klimaat/privacy">Meer informatie</a>]]></string>
+    <string name="updated">Bijgewerkt:</string>
+    <string name="created">Aangemaakt:</string>
+
+
+    <string name="view_button">BEKIJKEN</string>
+    <string name="additional_info">AANVULLENDE INFO</string>
+
+    <!-- Error messages -->
+    <string name="oops">Oops!</string>
+    <string name="time_out_error">Time out van het request.</string>
+    <string name="server_error">Serverfout.</string>
+    <string name="network_error">Netwerkfout.</string>
+    <string name="unknown_network_error">Onbekende netwerkfout. Probeer het later nog eens.</string>
+    <string name="no_internet_connection">Geen internetverbinding.\nControleer je internetverbinding.</string>
+    <string name="try_again">Try again</string>
+    <string name="not_refreshed">geen</string>
+    <string name="fetch_services_failed_reason_ps">Ophalen voorzieningen mislukt.\nReden: %s</string>
+    <string name="fetch_disruptions_failed_reason_ps">Ophalen verstoringen mislukt.\nReden: %s</string>
+    <string name="edit_locations_failed_reason_ps">Meldingstypen wijzigen mislukt.\nReden: %s</string>
+    <string name="edit_services_failed_reason_ps">Voorzieningen wijzigen mislukt.\nReden: %s</string>
+    <string name="edit_notifications_failed_reason_ps">Notificaties wijzigen mislukt.\nReden: %s</string>
+    <string name="not_registered">Je bent niet geregistreerd.</string>
+    <string name="no_access_register_again">Je hebt geen toegang.\nRegistreer opnieuw met je zakelijke email adres.</string>
+    <string name="not_active_activate_or_register">Je account is niet actief.\nActiveer je email of registreer opnieuw.</string>
+    <string name="not_registerd_use_business_email">Je bent niet geregistreerd.\nRegistreer met je zakelijke email adres.</string>
+    <string name="access">Toegang</string>
+    <string name="no_valid_email">Geen geldig email adres.</string>
+    <string name="share_to">Delen content</string>
+
+    <!-- Progress messages -->
+    <string name="fetch_services">Ophalen voorzieningen…</string>
+    <string name="processing">Verwerken…</string>
+    <string name="receive_updates">Updates ontvangen?</string>
+</resources>

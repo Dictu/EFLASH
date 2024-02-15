@@ -1,0 +1,14 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: a1a7f351-660d-4b66-b91b-3e2ea4559d22
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.announcement
+id: node.announcement
+target_entity_type_id: node
+target_bundle: announcement
+default_langcode: site_default
+language_alterable: false

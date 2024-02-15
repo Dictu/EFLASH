@@ -1,0 +1,40 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 615088f4-ddee-43a2-a91b-14d30bcbc1d2
+langcode: nl
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.incident.body
+    - field.field.node.incident.field_berichttype
+    - field.field.node.incident.field_status
+    - field.field.node.incident.field_update
+    - node.type.incident
+  module:
+    - text
+    - user
+id: node.incident.teaser
+targetEntityType: node
+bundle: incident
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_berichttype: true
+  field_status: true
+  field_update: true
+  langcode: true

@@ -1,0 +1,16 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 7b21cc9d-9540-4755-8c00-91f7a46eba53
+langcode: nl
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: nvrL9bFilzBvm2bjO9rQnFDpBA7dBBUjShSSt6NS-DU
+id: user_cancel_user_action
+label: 'De geselecteerde gebruikersaccount(s) annuleren'
+type: user
+plugin: user_cancel_user_action
+configuration: {  }

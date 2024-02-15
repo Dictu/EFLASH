@@ -1,0 +1,23 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: aa6613a6-67b7-4bef-8881-7ac72a1d5cd5
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seven
+id: kruimelpad_2
+theme: seven
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Kruimelpad
+  provider: system
+  label_display: '0'
+visibility: {  }

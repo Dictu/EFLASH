@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "SSSSSSSSSSSS",
+    "firebase_url": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+    "project_id": "SSSSSSSSSSS",
+    "storage_bucket": "SSSSSSSSSSSSSSSSSSSSSSS"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+        "android_client_info": {
+          "package_name": "nl.minez.eovb.ezoef"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

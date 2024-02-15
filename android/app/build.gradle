@@ -1,0 +1,385 @@
+/*
+ * Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+ * SPDX-License-Identifier: EUPL-1.2
+ */
+
+import java.util.regex.Pattern
+
+apply plugin: 'com.android.application'
+apply plugin: 'pmd'
+apply plugin: 'findbugs'
+apply plugin: 'jacoco'
+
+dependencies {
+    findbugs 'com.google.code.findbugs:findbugs:3.0.1'
+    findbugs configurations.findbugsPlugins.dependencies
+    findbugsPlugins 'com.h3xstream.findsecbugs:findsecbugs-plugin:1.4.6'
+}
+
+android {
+    compileSdkVersion androidCompileSdkVersion
+
+    flavorDimensions "default"
+
+    adbOptions {
+        setTimeOutInMs(50000)
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:2.0.1'
+    }
+
+    defaultConfig {
+        applicationId "nl.minez.eovb"
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
+
+        versionCode buildNumber
+        versionName appBaseVersion
+
+        println 'versionName of the app: ' + versionName
+
+        multiDexEnabled false
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testHandleProfiling true
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+
+    /**
+     * Signing configuration
+     */
+    signingConfigs {
+
+        acceptatie {
+            storeFile file(debugKeyStore)
+            storePassword debugKeyStorePassword
+            keyAlias debugKeyAlias
+            keyPassword debugKeyAliasPassword
+        }
+
+        productie {
+            storeFile file(releaseKeyStore)
+            storePassword releaseKeyStorePassword
+            keyAlias releaseKeyAlias
+            keyPassword releaseKeyAliasPassword
+        }
+    }
+
+    productFlavors {
+
+        /**
+         * Put flavor specific settings and buildconfig variables
+         */
+
+
+        eflashOntwikkel {
+            applicationIdSuffix ".eflash"
+            versionName appBaseVersion + '.' + buildNumber
+
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher_eflash",
+                    appRoundIcon: "@mipmap/ic_launcher_eflash",
+                    debuggable: "true"
+            ]
+        }
+
+        eflashAcceptatie {
+            applicationIdSuffix ".eflash"
+            versionName appBaseVersion + '.' + buildNumber
+
+            signingConfig signingConfigs.acceptatie
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    if(variant.productFlavors[0].name.equals("eflashAcceptatie")){
+                        output.outputFileName = new File("./../../../../../build/", "eflash-debug-signed-" + versionName + ".apk")
+                    }
+                }
+            }
+
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher_eflash",
+                    appRoundIcon: "@mipmap/ic_launcher_eflash",
+                    debuggable: "true"
+            ]
+        }
+
+        eflashProductie {
+            applicationIdSuffix ".eflash"
+            versionName = appBaseVersion
+
+            signingConfig signingConfigs.productie
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    if(variant.productFlavors[0].name.equals("eflashProductie")) {
+                        //TODO hardcoded file name moet hier weg
+                        output.outputFileName = new File("./../../../../../build/", "eflash-release-zipaligned-" + versionName+ ".apk")
+                    }
+                }
+            }
+
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher_eflash",
+                    appRoundIcon: "@mipmap/ic_launcher_eflash",
+                    debuggable: "false"
+            ]
+        }
+    }
+
+    buildTypes {
+        def BOOLEAN = "boolean"
+        def STRING = "String"
+        def COUNTLY_ENABLED = "COUNTLY_ENABLED"
+        def COUNTLY_URL = "COUNTLY_URL"
+        def COUNTLY_APP_KEY = "COUNTLY_APP_KEY"
+        def SERVER_URL = "SERVER_URL"
+
+        debug{
+            /**
+             * Check if not a jenkins build test with coverage enabled,
+             * if not a jenkins build its probably a developer machine run with coverage disabled
+             */
+            if (isJenkinsBuild) {
+                testCoverageEnabled = true
+                println 'With test coverage'
+            } else {
+                testCoverageEnabled = false
+            }
+            buildConfigField BOOLEAN, COUNTLY_ENABLED, "true"
+            buildConfigField STRING, COUNTLY_URL, "\"https://SSSSSSSSSSSSSS\""
+            buildConfigField STRING, COUNTLY_APP_KEY, "\"SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS\""
+            buildConfigField STRING, SERVER_URL, "\"https://SSSSSSSSSSSSS/\""
+            shrinkResources false
+            minifyEnabled false
+            zipAlignEnabled false
+        }
+        acceptatie {
+            testCoverageEnabled false
+            buildConfigField BOOLEAN, COUNTLY_ENABLED, "true"
+            buildConfigField STRING, COUNTLY_URL, "\"https://SSSSSSSSSSSSSS\""
+            buildConfigField STRING, COUNTLY_APP_KEY, "\"SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS\""
+            buildConfigField STRING, SERVER_URL, "\"https://SSSSSSSSSSSSSSS/\""
+            minifyEnabled true
+            shrinkResources false
+            zipAlignEnabled true
+            proguardFile 'proguard-rules.pro'
+            if (isJenkinsBuild) {
+                signingConfig signingConfigs.acceptatie
+            }
+        }
+
+        release {
+            testCoverageEnabled false
+            buildConfigField BOOLEAN, COUNTLY_ENABLED, "true"
+            buildConfigField STRING, COUNTLY_URL, "\"https://SSSSSSSSSSSSSS\""
+            buildConfigField STRING, COUNTLY_APP_KEY, "\"SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS\""
+            buildConfigField STRING, SERVER_URL, "\"https://SSSSSSSSSSSSSSSSS/\""
+            minifyEnabled true
+            shrinkResources false
+            zipAlignEnabled true
+            proguardFile 'proguard-rules.pro'
+            if (isJenkinsBuild) {
+                signingConfig signingConfigs.productie
+            }
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    lintOptions {
+        abortOnError false
+        htmlReport true
+        xmlReport true
+        htmlOutput file('build/reports/lint/lint-report.html')
+        xmlOutput file('build/reports/lint/lint-report.xml')
+    }
+
+    task findbugs(type: FindBugs, dependsOn:"assembleDebug") {
+        description 'Run findbugs'
+        group 'reporting'
+
+        classes = fileTree('build/intermediates/classes')
+        source = fileTree('src/main/java/')
+        classpath = files()
+
+        excludeFilter = file('findbugs-exclude.xml')
+        ignoreFailures = true
+
+        effort = 'max'
+
+        reports {
+            xml.enabled = true
+            html.enabled = false
+            xml { destination "build/reports/findbugs/findbugs.xml" }
+            html { destination "build/reports/findbugs/findbugs.html" }
+        }
+    }
+
+    task findSecurityBugs(type: FindBugs) {
+
+        classes = fileTree(project.rootDir.absolutePath).include("**/*.class")
+        source = fileTree(project.rootDir.absolutePath).include("**/*.java")
+        classpath = files()
+        pluginClasspath = project.configurations.findbugsPlugins
+
+        findbugs {
+            toolVersion = "3.0.1"
+            sourceSets = [android.sourceSets] // [sourceSets.main] for Java project
+            ignoreFailures = true
+            reportsDir = file("build/reports/findbugs/")
+            effort = "max"
+            reportLevel = "low"
+
+            reports {
+                xml.enabled = false
+                html.enabled = true
+            }
+        }
+    }
+
+    task pmd(type: Pmd, dependsOn: "assembleDebug") {
+        description 'Run pmd'
+        group 'reporting'
+
+        ruleSets = ["java-basic", "java-braces", "java-strings", "java-unusedcode"]
+        source = fileTree('src/main/java')
+
+        ignoreFailures = true
+        reports {
+            xml.enabled = true
+            html.enabled = false
+            xml {destination "build/reports/pmd/pmd.xml"}
+            html {destination "build/reports/pmd/pmd.html"}
+        }
+    }
+
+    def coverageSourceDirs = [
+            'app/src/main/java'
+    ]
+
+    task jacocoTestReport(type:JacocoReport) {
+        group = "Reporting"
+        description = "Generate Jacoco coverage reports"
+
+        classDirectories = fileTree(
+                dir: '/build/intermediates/',
+                excludes: ['**/R.class',
+                           '**/R$*.class',
+                           '**/*$ViewInjector*.*',
+                           '**/BuildConfig.*',
+                           '**/Manifest*.*']
+        )
+
+        additionalSourceDirs = files(coverageSourceDirs)
+        sourceDirectories = files(coverageSourceDirs)
+
+        executionData = files('build/output/code-coverage/connected/flavors/ACCEPTATIE/coverage.ec',
+                'build/output/code-coverage/connected/flavors/PRODUCTIE/coverage.ec')
+
+        reports {
+            xml.enabled = true
+            html.enabled = true
+        }
+    }
+
+    task increaseVersionCode << {
+        def manifestFile = file("src/main/AndroidManifest.xml")
+        def pattern = Pattern.compile("versionCode=\"(\\d+)\"")
+        def manifestText = manifestFile.getText()
+        def matcher = pattern.matcher(manifestText)
+        matcher.find()
+        println "Setting version code to ${android.defaultConfig.versionCode} in AndroidManifest.xml"
+        def manifestContent = matcher.replaceAll("versionCode=\"" + android.defaultConfig.versionCode + "\"")
+        manifestFile.write(manifestContent)
+
+        def buildPropertiesFile = file("../gradle.properties")
+        pattern = Pattern.compile("app_version_buildnumber=(.*)")
+        def buildPropertiesFileText = buildPropertiesFile.getText()
+        matcher = pattern.matcher(buildPropertiesFileText)
+        matcher.find()
+        println "Setting app_version_name to ${android.defaultConfig.versionCode} in gradle.properties"
+        def buildPropertiesContent = matcher.replaceAll("app_version_buildnumber=" + android.defaultConfig.versionCode)
+        buildPropertiesFile.write(buildPropertiesContent)
+    }
+
+    task increaseVersionNameAcceptatie << {
+        def manifestFile = file("src/main/AndroidManifest.xml")
+        def pattern = Pattern.compile("versionName=\"(.*)\"")
+        def manifestText = manifestFile.getText()
+        def matcher = pattern.matcher(manifestText)
+        matcher.find()
+
+        def version = android.defaultConfig.versionName + "." + buildNumber
+        println "Setting version name to " + version + " in AndroidManifest.xml"
+        def manifestContent = matcher.replaceAll("versionName=\"" + version + "\"")
+        manifestFile.write(manifestContent)
+
+        def buildPropertiesFile = file("../gradle.properties")
+        pattern = Pattern.compile("app_version_name=(.*)")
+        def buildPropertiesFileText = buildPropertiesFile.getText()
+        matcher = pattern.matcher(buildPropertiesFileText)
+        matcher.find()
+        println "Setting app_version_name to " + version + " in gradle.properties"
+        def buildPropertiesContent = matcher.replaceAll("app_version_name=" + version)
+        buildPropertiesFile.write(buildPropertiesContent)
+    }
+
+    task increaseVersionNameProductie << {
+        def manifestFile = file("src/main/AndroidManifest.xml")
+        def pattern = Pattern.compile("versionName=\"(.*)\"")
+        def manifestText = manifestFile.getText()
+        def matcher = pattern.matcher(manifestText)
+        matcher.find()
+        println "Setting version name to " + appBaseVersion + " in AndroidManifest.xml"
+        def manifestContent = matcher.replaceAll("versionName=\"" + appBaseVersion + "\"")
+        manifestFile.write(manifestContent)
+
+        def buildPropertiesFile = file("../gradle.properties")
+        pattern = Pattern.compile("app_version_name=(.*)")
+        def buildPropertiesFileText = buildPropertiesFile.getText()
+        matcher = pattern.matcher(buildPropertiesFileText)
+        matcher.find()
+        println "Setting app_version_name to " + appBaseVersion +  "in gradle.properties"
+        def buildPropertiesContent = matcher.replaceAll("app_version_name=" + appBaseVersion)
+        buildPropertiesFile.write(buildPropertiesContent)
+    }
+}
+
+dependencies {
+    androidTestImplementation 'com.android.support:support-annotations:27.1.1'
+    androidTestImplementation "com.android.support.test:runner:1.0.2"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.google.firebase:firebase-messaging:17.1.0'
+    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation 'org.ocpsoft.prettytime:prettytime:3.2.7.Final'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'net.danlew:android.joda:2.9.4.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    compileOnly 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    implementation group: 'com.google.guava', name: 'guava', version: '23.3-android'
+
+    // Countly
+    implementation 'ly.count.android:sdk:20.04.2'
+}
+
+apply plugin: 'com.google.gms.google-services'

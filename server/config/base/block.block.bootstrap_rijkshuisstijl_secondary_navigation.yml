@@ -1,0 +1,30 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 63a15823-483e-4385-9152-39baa5ac61dc
+langcode: nl
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - bootstrap_rijkshuisstijl
+_core:
+  default_config_hash: zQlKgpcH5k5cS6TZy0MGxPdqhbMz2q6_bQLEFo-iW3Y
+id: bootstrap_rijkshuisstijl_secondary_navigation
+theme: bootstrap_rijkshuisstijl
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Secondary navigation'
+  provider: system
+  label_display: '0'
+  level: 2
+  depth: 1
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,190 @@
+{
+    "name": "dictu-composer/diny-skeleton",
+    "description": "VDMi Project Skeleton for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Dienst ICT Uitvoering",
+            "role": "Maintainers"
+        }
+    ],
+    "repositories": {
+        "lab.dtnr.nl/65": {
+            "type": "composer",
+            "url": "https://lab.dtnr.nl/api/v4/group/65/-/packages/composer/packages.json"
+        },
+        "0": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "1": {
+            "type": "package",
+            "package": {
+                "name": "ckeditor/templates",
+                "version": "4.11.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "http://download.ckeditor.com/templates/releases/templates_4.11.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        }
+    },
+    "require": {
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "~1.0",
+        "dictudrupal/apn_push": "^0.1.2",
+        "dictudrupal/push_notifications": "^0.1.2",
+        "drupal/admin_toolbar": "^3.0.0",
+        "drupal/bootstrap_rijkshuisstijl": "^1.0@beta",
+        "drupal/components": "^2.2",
+        "drupal/config_ignore": "^2.0",
+        "drupal/config_split": "^1.0",
+        "drupal/console": "~1",
+        "drupal/content_access": "1.x-dev",
+        "drupal/core": "~8.9.0",
+        "drupal/core-composer-scaffold": "^9.1",
+        "drupal/csv_serialization": "^2.0",
+        "drupal/field_group": "^3.1",
+        "drupal/libraries": "~3",
+        "drupal/pcr": "^1.3",
+        "drupal/raven": "^3.1",
+        "drupal/restui": "^1.0",
+        "drupal/rules": "^3.0@alpha",
+        "drupal/shs": "dev-1.x",
+        "drupal/simple_oauth": "^1.0",
+        "drupal/user_registrationpassword": "1.0.0-alpha5",
+        "drupal/vde_drush": "^1.0@beta",
+        "drupal/views_data_export": "^1.0",
+        "drupal/wysiwyg_template": "^2.1.0",
+        "drush/drush": "^10.3",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "webflo/drupal-finder": "^1.0",
+        "webmozart/path-util": "^2.3",
+        "wrep/notificato": "^1.2"
+    },
+    "require-dev": {
+        "drupal/coder": "^8.3",
+        "drupal/core-dev": "~8.9.0",
+        "drupal/devel": "^4.0",
+        "drupal/devel_php": "^1.0"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "discard-changes": true,
+        "secure-http": false,
+        "platform": {
+            "php": "7.3"
+        },
+        "gitlab-domains": ["lab.dtnr.nl"],
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/console-extend-plugin": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true
+        }
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php",
+            "scripts/composer/DrupalSkeletonInstaller.php"
+        ]
+    },
+    "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "DrupalProject\\composer\\ScriptHandler::cleanupFiles",
+            "scripts/composer/post-install.sh",
+            "cp scripts/robots.txt web"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "DrupalProject\\composer\\ScriptHandler::cleanupFiles",
+            "vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer",
+            "cp scripts/robots.txt web"
+        ],
+        "post-create-project-cmd": "DrupalProject\\composer\\DrupalSkeletonInstaller::install"
+    },
+    "extra": {
+        "enable-patching": true,
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "initial": {
+                ".editorconfig": "../.editorconfig",
+                ".gitattributes": "../.gitattributes"
+            },
+            "file-mapping": {
+                "[web-root]/INSTALL.txt": false,
+                "[web-root]/README.txt": false,
+                "[web-root]/robots.txt": false,
+                "[web-root]/web.config": false,
+                "[web-root]/sites/README.txt": false,
+                "[web-root]/modules/README.txt": false,
+                "[web-root]/profiles/README.txt": false,
+                "[web-root]/themes/README.txt": false
+            }
+        },
+        "patches": {
+            "drupal/bootstrap_rijkshuisstijl": {
+                "Component module changed the name space": "https://www.drupal.org/files/issues/2021-02-03/3196324-2.patch"
+            },
+            "drupal/rules": {
+                "Rules registers no listeners on rare occasions": "https://www.drupal.org/files/issues/2020-01-30/rules-add_generic_event_listener-2816033-74.patch"
+            },
+            "drupal/user_registrationpassword": {
+                "re-register and confirmation-page fixes": "https://lab.dtnr.nl/api/v4/projects/100/repository/files/user_registrationpassword-1.0-alpha5.patch/raw?ref=master&private_token=FJgxc4PKwrBnFXcqBzcR"
+            },
+            "drupal/simple_oauth": {
+                "simple_oauth compatibility with Drupal 8.7.x": "https://lab.dtnr.nl/api/v4/projects/100/repository/files/simpleauth-support-8.7.x.patch/raw?ref=master&private_token=FJgxc4PKwrBnFXcqBzcR"
+            },
+            "drupal/push_notifications": {
+                "Google api key field larger": "https://lab.dtnr.nl/api/v4/projects/100/repository/files/push_notifications_01_google_api_field.patch/raw?ref=master&private_token=FJgxc4PKwrBnFXcqBzcR",
+                "For Android use Firebase instead off GCM": "https://lab.dtnr.nl/api/v4/projects/100/repository/files/push_notifications_02_use_firebase_for_android.patch/raw?ref=master&private_token=FJgxc4PKwrBnFXcqBzcR",
+                "Apple push using third party library for sending push messages": "https://lab.dtnr.nl/api/v4/projects/100/repository/files/push_notifications_03_use_notificato_for_apns.patch/raw?ref=master&private_token=FJgxc4PKwrBnFXcqBzcR",
+                "Pushmessage contains separate title and body attribute": "https://lab.dtnr.nl/api/v4/projects/100/repository/files/push_notifications_04_title-body.patch/raw?ref=master&private_token=FJgxc4PKwrBnFXcqBzcR",
+                "Priority for Firebase": "https://lab.dtnr.nl/api/v4/projects/100/repository/files/push_notifications_05_priority_for_android.patch/raw?ref=master&private_token=FJgxc4PKwrBnFXcqBzcR",
+                "Admin page only for Admins": "https://lab.dtnr.nl/api/v4/projects/100/repository/files/push_notifications_06_only_admin_permissions.patch/raw?ref=master&private_token=FJgxc4PKwrBnFXcqBzcR"
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        }
+    }
+}

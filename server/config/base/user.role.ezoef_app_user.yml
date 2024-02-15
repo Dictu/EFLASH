@@ -1,0 +1,17 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 6b067109-772f-4fa1-984d-3cbd3bf5077e
+langcode: nl
+status: true
+dependencies: {  }
+id: ezoef_app_user
+label: 'ezoef app user'
+weight: 4
+is_admin: null
+permissions:
+  - 'restful delete nicol_push_notifications'
+  - 'restful get nicol_messagetypes'
+  - 'restful post nicol_announcements'
+  - 'restful post nicol_incidents'
+  - 'restful post nicol_push_notifications'

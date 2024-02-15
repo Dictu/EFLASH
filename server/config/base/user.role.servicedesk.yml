@@ -1,0 +1,39 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: dc61dcb6-2e77-4467-a65f-65d0c594de32
+langcode: nl
+status: true
+dependencies: {  }
+id: servicedesk
+label: Servicedesk
+weight: 7
+is_admin: null
+permissions:
+  - 'access comments'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access in-place editing'
+  - 'access shortcuts'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer nodes'
+  - 'administer shortcuts'
+  - 'administer wysiwyg templates'
+  - 'create announcement content'
+  - 'create incident content'
+  - 'delete any announcement content'
+  - 'delete any incident content'
+  - 'delete incident revisions'
+  - 'delete own announcement content'
+  - 'delete own incident content'
+  - 'edit any announcement content'
+  - 'edit any incident content'
+  - 'edit own announcement content'
+  - 'edit own comments'
+  - 'edit own incident content'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'switch shortcut sets'
+  - 'use text format wysiwyg_default'
+  - 'view the administration theme'

@@ -1,0 +1,24 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+sender_primary: 'Ministerie van Economische Zaken'
+sender_secondary: ''
+header_bg_color: '1'
+header_bg_picture_width: '6'
+navigation_border: 1
+titlebar: ''
+brand_color: orange
+sender_breakpoint: ''
+_core:
+  default_config_hash: ZS3hhsG14mJfnkgqyIufdvPE-a6N-tO9k1eyFVhWtVc
+langcode: nl
+features:
+  node_user_picture: false
+  comment_user_picture: true
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+header_bg_picture: {  }

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eflash_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="haS-oi-Oze">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Op weg naar een geïnformeerde gebruiker" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FZX-Bx-I4E">
+                                <rect key="frame" x="5" y="395.66666666666669" width="365" height="21"/>
+                                <fontDescription key="fontDescription" name="RijksoverheidSansTextTT-Regular" family="RijksoverheidSansTextTT" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rijkslogo" translatesAutoresizingMaskIntoConstraints="NO" id="0gz-HF-CcY">
+                                <rect key="frame" x="162.66666666666666" y="30" width="50" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3ja-jG-bBH"/>
+                                    <constraint firstAttribute="height" constant="100" id="EpA-fd-pQK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="driehoek" translatesAutoresizingMaskIntoConstraints="NO" id="Ucu-3j-srJ">
+                                <rect key="frame" x="0.0" y="528" width="227.66666666666666" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="1RA-oP-6ec"/>
+                                    <constraint firstAttribute="width" constant="227.66666666666666" id="VWl-Hy-8Gi"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="FZX-Bx-I4E" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Bv8-Op-fgw"/>
+                            <constraint firstItem="haS-oi-Oze" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="InH-ao-mVQ"/>
+                            <constraint firstItem="haS-oi-Oze" firstAttribute="bottom" secondItem="b3d-i9-kOH" secondAttribute="bottom" constant="34" id="K9t-HU-H4t"/>
+                            <constraint firstItem="b3d-i9-kOH" firstAttribute="bottom" secondItem="Ucu-3j-srJ" secondAttribute="bottom" id="R2a-Ni-yFs"/>
+                            <constraint firstItem="b3d-i9-kOH" firstAttribute="trailing" secondItem="haS-oi-Oze" secondAttribute="trailing" id="WRU-op-GTo"/>
+                            <constraint firstItem="0gz-HF-CcY" firstAttribute="centerX" secondItem="b3d-i9-kOH" secondAttribute="centerX" id="bfn-Tr-Kel"/>
+                            <constraint firstItem="b3d-i9-kOH" firstAttribute="top" secondItem="0gz-HF-CcY" secondAttribute="bottom" constant="-86" id="idc-8R-Mn1"/>
+                            <constraint firstItem="FZX-Bx-I4E" firstAttribute="leading" secondItem="b3d-i9-kOH" secondAttribute="leading" constant="5" id="nkw-8S-RDp"/>
+                            <constraint firstItem="b3d-i9-kOH" firstAttribute="trailing" secondItem="FZX-Bx-I4E" secondAttribute="trailing" constant="5" id="pTi-FL-IRX"/>
+                            <constraint firstItem="haS-oi-Oze" firstAttribute="leading" secondItem="b3d-i9-kOH" secondAttribute="leading" id="pnz-SO-yYd"/>
+                            <constraint firstItem="Ucu-3j-srJ" firstAttribute="leading" secondItem="b3d-i9-kOH" secondAttribute="leading" id="rrV-47-bkR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b3d-i9-kOH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.399999999999999" y="373.15270935960592"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="driehoek" width="403" height="441"/>
+        <image name="eflash_gradient" width="7" height="341.33334350585938"/>
+        <image name="rijkslogo" width="600" height="1050"/>
+    </resources>
+</document>

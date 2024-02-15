@@ -1,0 +1,31 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 7a34dc94-f6b3-47dc-8937-f2865dc9db8e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_berichttype
+    - node.type.announcement
+    - taxonomy.vocabulary.berichttypen
+id: node.announcement.field_berichttype
+field_name: field_berichttype
+entity_type: node
+bundle: announcement
+label: Meldingstype
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      berichttypen: berichttypen
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

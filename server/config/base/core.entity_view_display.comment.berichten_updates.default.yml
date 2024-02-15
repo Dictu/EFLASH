@@ -1,0 +1,31 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 56022771-9d8e-46ba-976f-335508f6ce94
+langcode: nl
+status: true
+dependencies:
+  config:
+    - comment.type.berichten_updates
+    - field.field.comment.berichten_updates.comment_body
+  module:
+    - text
+id: comment.berichten_updates.default
+targetEntityType: comment
+bundle: berichten_updates
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

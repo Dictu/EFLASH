@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+ SPDX-License-Identifier: EUPL-1.2
+-->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/grp_disruptions">
+        <item
+            android:id="@+id/nav_disruptions"
+            android:icon="@drawable/ic_warning_black_24dp"
+            android:title="@string/disruptions" />
+    </group>
+    <group android:id="@+id/grp_edit_service">
+        <item
+            android:id="@+id/nav_edit_service"
+            android:icon="@drawable/ic_local_play_black_24dp"
+            android:title="Voorzieningen wijzigen" />
+    </group>
+    <group android:id="@+id/grp_edit_location">
+        <item
+            android:id="@+id/nav_edit_location"
+            android:icon="@drawable/ic_location_searching_black_24dp"
+            android:title="Meldingstypen wijzigen" />
+    </group>
+    <group android:id="@+id/grp_notifications">
+        <item
+            android:id="@+id/nav_notifications_on"
+            android:icon="@drawable/ic_notifications_off_black_24dp"
+            android:title="Push notificaties"
+            android:visible="true" />
+        <item
+            android:id="@+id/nav_notifications_off"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            android:title="Push notificaties"
+            android:visible="false" />
+    </group>
+    <group android:id="@+id/grp_info">
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="Info" />
+    </group>
+    <group android:id="@+id/grp_privacy">
+        <item
+            android:id="@+id/nav_privacy"
+            android:icon="@drawable/ic_baseline_visibility_24px"
+            android:title="Privacy" />
+    </group>
+    <group android:id="@+id/grp_checklist">
+        <item
+            android:id="@+id/nav_checklist"
+            android:icon="@drawable/ic_checklist"
+            android:title="@string/accessibility" />
+    </group>
+</menu>

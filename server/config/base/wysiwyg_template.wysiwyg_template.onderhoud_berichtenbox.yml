@@ -1,0 +1,15 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: eeb457fb-b7b3-44a5-a444-9915d7e0d3ee
+langcode: nl
+status: true
+dependencies: {  }
+id: onderhoud_berichtenbox
+label: 'Onderhoud Berichtenbox (beheerders)'
+description: ''
+body:
+  value: "<p>Gepland onderhoud [datum] [tijd]</p>\r\n\r\n<p>Morgen&nbsp;[dag datum] vindt er onderhoud plaats met onderbreking&nbsp;op de Berichtenbox voor bedrijven.</p>\r\n\r\n<p>Mogelijk ondervinden gebruikers van de&nbsp;Berichtenbox voor bedrijven,&nbsp;tussen ca.&nbsp;[tijd] uur&nbsp;en&nbsp;[tijd] uur problemen met inloggen. Indien&nbsp;de Berichtenbox voor bedrijven niet&nbsp;kan worden benaderd vragen wij gebruikers om&nbsp;het op een later tijdstip nog eens te proberen.</p>\r\n"
+  format: wysiwyg_default
+weight: null
+node_types: {  }

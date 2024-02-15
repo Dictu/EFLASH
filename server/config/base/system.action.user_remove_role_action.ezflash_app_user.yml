@@ -1,0 +1,17 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: dae64a0a-9286-4eb5-9126-44a4b6f907be
+langcode: nl
+status: true
+dependencies:
+  config:
+    - user.role.ezflash_app_user
+  module:
+    - user
+id: user_remove_role_action.ezflash_app_user
+label: 'Verwijder de rol ezflash app user van de geselecteerde gebruikers'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: ezflash_app_user

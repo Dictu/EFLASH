@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Contains nicol_api.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+const EZ_EFLASH_DOMAIN = 'flash.ezoefapp.nl';
+const EZ_EZOEF_DRUPAL_ROLE = 'ezoef_app_user';
+const EZ_EFLASH_DRUPAL_ROLE = 'ezflash_app_user';
+
+/**
+ * Implements hook_help().
+ */
+function nicol_api_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the nicol_api module.
+    case 'help.page.nicol_api':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('nicol API') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_cron().
+ */
+function nicol_api_cron() {
+
+  /* @var \Drupal\Core\Entity\EntityManagerInterface $manager */
+  $manager = \Drupal::service('entity.manager');
+  $storage = $manager->getStorage('access_token');
+  $query = $storage->getQuery();
+
+  // We only update refresh tokens that expire within 1 week.
+  $ids = $query
+    ->condition('expire', strtotime("+1 week"), '<')
+    ->condition('resource', 'authentication')
+    ->execute();
+
+  if (!empty($ids)) {
+    $refresh_tokens = $storage->loadMultiple($ids);
+
+    // Update the refresh tokens.
+    if (!empty($refresh_tokens)) {
+      foreach ($refresh_tokens as $id => $refresh_token) {
+        if ($user = $refresh_token->get('auth_user_id')->entity) {
+          // Check on eZoef users only.
+          if (substr(strrchr($user->getEmail(), "@"), 1) == 'dinyflash.ezoefapp.nl' ) {
+            \Drupal::logger('nicol_api')->notice('Update refresh token @token for user @id.', array('@token' => $id, '@id' => $user->id()));
+
+            $refresh_token->set('expire', strtotime("+4 month"));
+            $refresh_token->save();
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: f68a4fe1-9aa4-432e-b432-eeccf34483e4
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ezoef
+_core:
+  default_config_hash: ApMmjSPNOLqUCJhmmhz7E5weo1GsHaFVK14dmXHXkx0
+id: ezoef_messages
+theme: ezoef
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RijksoverheidSansTextTT-Bold_2_0.ttf">
+            <string>RijksoverheidSansTextTT-Bold</string>
+        </array>
+        <array key="RijksoverheidSansTextTT-Regular_2_0.ttf">
+            <string>RijksoverheidSansTextTT-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="EFLASH" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="Qr1-lA-Ygp" id="EoL-xV-CkF"/>
+                <outlet property="registrationButton" destination="JN5-TL-uC7" id="HUP-me-GA7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qr1-lA-Ygp">
+                    <rect key="frame" x="22" y="248.5" width="330" height="32"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Nfu-3u-pHR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="RijksoverheidSansTextTT-Regular" family="RijksoverheidSansTextTT" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="giE-OK-0hx"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zy2-3X-Q4b">
+                    <rect key="frame" x="11" y="156" width="353" height="76.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="500" constant="168" id="v7o-1Z-rag"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="Welkom bij de EZOEF app!   Om de app te kunnen gebruiken dien je eerst te registreren met je zakelijke email adres.">
+                            <attributes>
+                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <font key="NSFont" metaFont="system" size="16"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JN5-TL-uC7">
+                    <rect key="frame" x="57" y="290.5" width="260" height="32"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="6mG-Ky-mwN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="RijksoverheidSansTextTT-Bold" family="RijksoverheidSansTextTT" pointSize="20"/>
+                    <state key="normal" title="Registreer"/>
+                    <connections>
+                        <action selector="registerButtonPressed:" destination="-1" eventType="touchUpInside" id="edv-1m-IUZ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registreren" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTw-60-YhY">
+                    <rect key="frame" x="0.0" y="120" width="375" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="8YX-hV-4ji"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="RijksoverheidSansTextTT-Bold" family="RijksoverheidSansTextTT" pointSize="21"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rijkslogo" translatesAutoresizingMaskIntoConstraints="NO" id="kd4-u5-m3Y">
+                    <rect key="frame" x="162.5" y="0.0" width="50" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="64H-h8-zHn"/>
+                        <constraint firstAttribute="width" constant="50" id="d7t-Zh-nrY"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JN5-TL-uC7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="57" id="5k3-2m-EwN"/>
+                <constraint firstItem="JN5-TL-uC7" firstAttribute="top" secondItem="Qr1-lA-Ygp" secondAttribute="bottom" constant="10" id="6z0-fS-gH9"/>
+                <constraint firstItem="Qr1-lA-Ygp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="8mX-wr-4tJ"/>
+                <constraint firstAttribute="trailing" secondItem="Zy2-3X-Q4b" secondAttribute="trailing" constant="11" id="DAc-BO-IQ6"/>
+                <constraint firstAttribute="trailing" secondItem="JN5-TL-uC7" secondAttribute="trailing" constant="58" id="DcV-wF-j02"/>
+                <constraint firstItem="gTw-60-YhY" firstAttribute="top" secondItem="kd4-u5-m3Y" secondAttribute="bottom" constant="20" id="JAd-Sj-dMq"/>
+                <constraint firstItem="qdL-Vr-b1D" firstAttribute="top" secondItem="kd4-u5-m3Y" secondAttribute="top" constant="20" id="ThA-jf-aHK"/>
+                <constraint firstItem="gTw-60-YhY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Vip-4z-5U2"/>
+                <constraint firstItem="Qr1-lA-Ygp" firstAttribute="top" secondItem="Zy2-3X-Q4b" secondAttribute="bottom" constant="16" id="di0-ek-vm9"/>
+                <constraint firstItem="Zy2-3X-Q4b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="11" id="iHG-jy-ypb"/>
+                <constraint firstItem="Zy2-3X-Q4b" firstAttribute="top" secondItem="gTw-60-YhY" secondAttribute="bottom" constant="8" id="m7d-jh-jwA"/>
+                <constraint firstAttribute="trailing" secondItem="gTw-60-YhY" secondAttribute="trailing" id="tRS-g8-uwc"/>
+                <constraint firstAttribute="trailing" secondItem="Qr1-lA-Ygp" secondAttribute="trailing" constant="23" id="xch-Nf-2pg"/>
+                <constraint firstItem="kd4-u5-m3Y" firstAttribute="centerX" secondItem="qdL-Vr-b1D" secondAttribute="centerX" id="xzO-9N-VSu"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="qdL-Vr-b1D"/>
+            <point key="canvasLocation" x="-16" y="-90"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="rijkslogo" width="600" height="1050"/>
+    </resources>
+</document>

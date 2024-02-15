@@ -1,0 +1,73 @@
+{
+    "TVS" : {
+        "id" : "52",
+        "locations" : [
+                       {
+                       "id" : "8",
+                       "name" : "TVS onderhoud ACC2"
+                       },
+                       {
+                       "id" : "61",
+                       "name" : "TVS storing ACC2"
+                       },
+                       {
+                       "id" : "41",
+                       "name" : "TVS onderhoud PROD"
+                       },
+                       {
+                       "id" : "42",
+                       "name" : "TVS storing PROD"
+                       },
+                       {
+                       "id" : "57",
+                       "name" : "TVS langdurige storing PROD"
+                       },
+                       {
+                       "id" : "60",
+                       "name" : "TVS DigiD storing PROD"
+                       },
+                       {
+                       "id" : "40",
+                       "name" : "TVS DigiD onderhoud PROD"
+                       }
+                       ]
+    },
+    "BVS" : {
+        "id" : "55",
+        "locations" : [
+                       {
+                       "id" : "62",
+                       "name" : "BVS onderhoud ACC"
+                       },
+                       {
+                       "id" : "33",
+                       "name" : "BVS storing ACC"
+                       },
+                       {
+                       "id" : "29",
+                       "name" : "BVS onderhoud PROD"
+                       },
+                       {
+                       "id" : "2",
+                       "name" : "BVS storing PROD"
+                       }
+                       ]
+    },
+    "Berichtenbox" : {
+        "id" : "48",
+        "locations" : [
+                       {
+                       "id" : "67",
+                       "name" : "Berichtenbox onderhoud"
+                       },
+                       {
+                       "id" : "56",
+                       "name" : "Berichtenbox storing"
+                       },
+                       {
+                       "id" : "32",
+                       "name" : "Berichtenbox langdurige storing"
+                       }
+                       ]
+    }
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainSegmentsViewController" customModule="EFLASH" customModuleProvider="target">
+            <connections>
+                <outlet property="disruptionsScrollView" destination="hWB-GL-guR" id="5ST-BD-Mwe"/>
+                <outlet property="segmentedControl" destination="VUS-Fa-mxj" id="FzY-ZW-MXh"/>
+                <outlet property="view" destination="iN0-l3-epB" id="FPe-cz-zmX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VUS-Fa-mxj">
+                    <rect key="frame" x="14" y="8" width="386" height="32"/>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                        <segment title=""/>
+                    </segments>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="segmentValueChanged:" destination="-1" eventType="valueChanged" id="FM2-e0-4D7"/>
+                    </connections>
+                </segmentedControl>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWB-GL-guR">
+                    <rect key="frame" x="0.0" y="47" width="414" height="849"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="wOd-Nx-sd6"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VUS-Fa-mxj" secondAttribute="trailing" constant="14" id="1Jk-B1-x5i"/>
+                <constraint firstAttribute="bottom" secondItem="hWB-GL-guR" secondAttribute="bottom" id="3VG-RB-kLd"/>
+                <constraint firstItem="VUS-Fa-mxj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="7fd-WQ-UBc"/>
+                <constraint firstItem="hWB-GL-guR" firstAttribute="top" secondItem="VUS-Fa-mxj" secondAttribute="bottom" constant="8" id="Gv0-Yp-lG9"/>
+                <constraint firstItem="hWB-GL-guR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Gz2-Aj-sys"/>
+                <constraint firstAttribute="trailing" secondItem="hWB-GL-guR" secondAttribute="trailing" id="NFd-Po-zLg"/>
+                <constraint firstItem="VUS-Fa-mxj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Xmb-k2-hBi"/>
+            </constraints>
+            <point key="canvasLocation" x="41" y="113"/>
+        </view>
+    </objects>
+</document>

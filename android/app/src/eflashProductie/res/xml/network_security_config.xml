@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+ SPDX-License-Identifier: EUPL-1.2
+-->
+
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="false">SSSSSSSSSSSSSSS</domain>
+        <pin-set>
+            <pin digest="SHA-256">4gG4AIKg4jKcRO9AbGBCV64PKFSJVKSNL8j0+zF2m18=</pin>
+            <pin digest="SHA-256">Uru4DWx+N+Ju1LMOBUHr8l1GFqUp0S2IeniNdUJMn+Y=</pin>
+            <pin digest="SHA-256">N9+YluTCUa/HTXc60QxjUReBLpRniAkIK2N84DhgmW4=</pin>
+        </pin-set>
+    </domain-config>
+</network-security-config>

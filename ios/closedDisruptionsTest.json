@@ -1,0 +1,68 @@
+ [
+  {
+  "status" : "closed",
+  "location" : [
+                {
+                "tid" : "65",
+                "name" : "Berichtenbox storing"
+                }
+                ],
+  "id" : "78",
+  "services" : [
+                {
+                "tid" : "48",
+                "name" : "Berichtenbox"
+                }
+                ],
+  "title" : "Nieuwe storing Berichtenbox",
+  "field_updates" : [
+  
+  ],
+  "created" : "2016-12-14T09:55:10+0200",
+  "changed" : "2016-12-14T09:55:29+0200",
+  "body" : "Hallo hoi hoi"
+  },
+  {
+  "status" : "closed",
+  "location" : [
+                {
+                "tid" : "32",
+                "name" : "Berichtenbox onderhoud"
+                }
+                ],
+  "id" : "77",
+  "services" : [
+                {
+                "tid" : "48",
+                "name" : "Berichtenbox"
+                }
+                ],
+  "title" : "Berichten verkeerde layout",
+  "field_updates" : [
+  
+  ],
+  "created" : "2016-12-14T09:51:29+0200",
+  "changed" : "2016-12-14T09:51:53+0200",
+  "body" : "De layout van de berichten in de Berichtenbox is bij sommige gebruikers niet goed."
+  },
+  {
+  "status" : "closed",
+  "location" : [
+  
+  ],
+  "id" : "76",
+  "services" : [
+                {
+                "tid" : "48",
+                "name" : "Berichtenbox"
+                }
+                ],
+  "title" : "Onderhoud berichtenbox",
+  "field_updates" : [
+  
+  ],
+  "created" : "2016-12-14T09:49:36+0200",
+  "changed" : "2016-12-14T09:50:57+0200",
+  "body" : "Door onderhoud kan van donderdagnacht tot vrijdagochtend de berichtenbox moeilijk bereikbaar zijn."
+  }
+  ]

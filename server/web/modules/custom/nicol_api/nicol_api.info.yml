@@ -1,0 +1,8 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+name: Nicol API
+type: module
+description: Nicol API
+core: 8.x
+package: Nicol

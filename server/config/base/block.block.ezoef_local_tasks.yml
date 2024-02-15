@@ -1,0 +1,25 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 543e5a30-c1d7-4b82-b9e1-2b7bb8dddee8
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - ezoef
+_core:
+  default_config_hash: X9f2dnm_VMr9mtceu7tcz952u51Kyd0HrejJg272n2A
+id: ezoef_local_tasks
+theme: ezoef
+region: local
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

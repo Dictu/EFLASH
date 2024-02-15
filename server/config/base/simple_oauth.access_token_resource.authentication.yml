@@ -1,0 +1,14 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 1c17e8fe-bc80-4add-9868-7b73f8fd8747
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 36e1N-wGUFqXmROc_RoCEKRwxTMQxO3IPntpcMZUhJ8
+id: authentication
+label: Authentication
+description: 'Tokens that grant access to this resource will have access to generate new access tokens.'
+locked: true
+permissions: null

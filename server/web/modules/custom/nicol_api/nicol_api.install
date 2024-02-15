@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update functions for Nicol_api.
+ */
+
+
+/**
+ * Add a Nicol_data column to the push_notifications_tokens table.
+ */
+function nicol_api_update_8002() {
+
+  $database = \Drupal::database();
+  $schema = $database->schema();
+
+  if ($schema->tableExists('push_notifications_tokens')) {
+    $spec = array(
+      'type' => 'text',
+      'size' => 'big',
+      'not null' => FALSE,
+      'description' => "Nicol Push Notifications",
+    );
+    $schema->addField('push_notifications_tokens', 'nicol_data', $spec);
+  }
+}
+
+/**
+ * Add a Nicol_data column to the push_notifications_tokens table.
+ */
+function nicol_api_update_8003() {
+
+  $database = \Drupal::database();
+  $schema = $database->schema();
+
+  if ($schema->tableExists('push_notifications_tokens')) {
+    $spec = array(
+      'type' => 'int',
+      'not null' => TRUE,
+      'default'  => 0,
+      'description' => "Receive Nicol Push Notifications for updates",
+    );
+    $schema->addField('push_notifications_tokens', 'nicol_notifications', $spec);
+  }
+
+  // TODO: Update column for existing records.
+}

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains nicol_push_notifications.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function nicol_push_notifications_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the nicol_notifications module.
+    case 'help.page.nicol_push_notifications':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Nicol Push Notifications') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,17 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 99addd11-e74c-4733-a703-13ea07ade939
+langcode: nl
+status: true
+dependencies:
+  config:
+    - user.role.functioneel_beheerder
+  module:
+    - user
+id: user_remove_role_action.functioneel_beheerder
+label: 'Verwijder de rol Functioneel beheerder van de geselecteerde gebruikers'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: functioneel_beheerder

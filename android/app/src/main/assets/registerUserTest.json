@@ -1,0 +1,10 @@
+{
+    "success": 1,
+    "message": "Account was succesvol aangemaakt.",
+    "data": {
+        "access_token": "access",
+        "token_type": "Bearer",
+        "expires_in": 31536000,
+        "refresh_token": "refresh"
+    }
+}

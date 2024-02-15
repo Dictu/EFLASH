@@ -1,0 +1,26 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 20f1063b-fd8e-489b-a824-75ba76f0de0b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_linked_to_app
+    - taxonomy.vocabulary.berichttypen
+  module:
+    - options
+id: taxonomy_term.berichttypen.field_linked_to_app
+field_name: field_linked_to_app
+entity_type: taxonomy_term
+bundle: berichttypen
+label: 'Bestemd voor app'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ezoef
+default_value_callback: ''
+settings: {  }
+field_type: list_string

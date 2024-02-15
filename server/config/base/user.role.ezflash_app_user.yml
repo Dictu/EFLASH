@@ -1,0 +1,20 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 801a2f68-aa37-401b-a689-40690e4678a6
+langcode: nl
+status: true
+dependencies: {  }
+id: ezflash_app_user
+label: 'ezflash app user'
+weight: 5
+is_admin: null
+permissions:
+  - 'restful delete nicol_push_notifications'
+  - 'restful get nicol_messagetypes'
+  - 'restful get nicol_messagetypes_anon'
+  - 'restful post nicol_announcements'
+  - 'restful post nicol_announcements_anonymous'
+  - 'restful post nicol_incidents'
+  - 'restful post nicol_incidents_anonymous'
+  - 'restful post nicol_push_notifications'

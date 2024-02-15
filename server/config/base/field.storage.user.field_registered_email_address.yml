@@ -1,0 +1,21 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 5086cb46-799b-4be5-ae77-c41bb9beb2de
+langcode: nl
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_registered_email_address
+field_name: field_registered_email_address
+entity_type: user
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

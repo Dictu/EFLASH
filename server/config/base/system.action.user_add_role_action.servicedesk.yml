@@ -1,0 +1,17 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 36a4376c-8c6b-4705-85aa-dcaa690df135
+langcode: nl
+status: true
+dependencies:
+  config:
+    - user.role.servicedesk
+  module:
+    - user
+id: user_add_role_action.servicedesk
+label: 'Voeg de rol Servicedesk toe aan de geselecteerde gebruikers'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: servicedesk

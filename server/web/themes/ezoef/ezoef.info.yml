@@ -1,0 +1,27 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+name: eZoef theme
+type: theme
+description: Theme for ezoef backend
+core: 8.x
+# Defines the base theme
+base theme: bootstrap_rijkshuisstijl
+# Regions
+
+regions:
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  breadcrumb: 'Breadcrumb'
+  header: 'Top Bar'
+  titlebar: 'Title bar'
+  navbar_form: 'Primary menu - Search'
+  local: 'Local tasks and actions'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary sidebar'
+  sidebar_second: 'Secondary sidebar'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'

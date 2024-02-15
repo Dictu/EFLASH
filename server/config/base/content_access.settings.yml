@@ -1,0 +1,17 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+content_access_roles_gids:
+  anonymous: 1
+  authenticated: 2
+  administrator: 3
+  ezoef_app_user: 5
+  ezflash_app_user: 6
+  functioneel_beheerder: 7
+  servicedesk: 8
+_core:
+  default_config_hash: 7LkiviGITIpniIOOIzpuxR7r4XzqqYN_cwu0fb0kx1M
+langcode: nl
+content_access_node_type:
+  incident: 'a:2:{s:8:"view_own";a:1:{i:0;s:13:"authenticated";}s:4:"view";a:1:{i:0;s:13:"authenticated";}}'
+  announcement: 'a:2:{s:8:"view_own";a:1:{i:0;s:13:"authenticated";}s:4:"view";a:1:{i:0;s:13:"authenticated";}}'

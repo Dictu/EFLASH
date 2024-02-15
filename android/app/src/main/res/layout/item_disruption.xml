@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+ SPDX-License-Identifier: EUPL-1.2
+-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="nl.minez.eovb.ezoef.view.viewModel.DisruptionViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="@{viewModel.onClick}"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/touchable_background_white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:text="@{viewModel.title}"
+                    android:textColor="@color/colorDarkText"
+                    android:textSize="@dimen/text_title"
+                    android:typeface="@{viewModel.boldTypeFace}" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:bufferType="spannable"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:text="@{viewModel.service}"
+                                android:textColor="@color/colorDarkText"
+                                android:textSize="@dimen/text_body"
+                                android:typeface="@{viewModel.regularTypeFace}" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:bufferType="spannable"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:minLines="1"
+
+                                android:text="@{viewModel.location}"
+                                android:textColor="@color/colorDarkText"
+                                android:textSize="@dimen/text_body"
+                                android:typeface="@{viewModel.regularTypeFace}" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:text="@{viewModel.createdTime}"
+                            android:textColor="@color/colorButtonNormal"
+                            android:textSize="@dimen/text_extra_small_body"
+                            android:typeface="@{viewModel.regularTypeFace}"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:text="@{viewModel.updatedTime}"
+                            android:textColor="@color/colorButtonNormal"
+                            android:textSize="@dimen/text_extra_small_body"
+                            android:typeface="@{viewModel.regularTypeFace}" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>

@@ -1,0 +1,15 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 9127ff6a-e16f-4944-9f64-635fa80050ad
+langcode: nl
+status: true
+dependencies: {  }
+id: tvs_verstoring
+label: 'TVS Verstoring'
+description: ''
+body:
+  value: "<p>TVS Verstoring</p>\r\n\r\n<p>Op dit moment is er een storing met TVS op de [productie/acceptatie]-omgeving. Onderzocht wordt wat de oorzaak is.</p>\r\n"
+  format: wysiwyg_default
+weight: null
+node_types: {  }

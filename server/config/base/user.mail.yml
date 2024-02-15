@@ -1,0 +1,33 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+cancel_confirm:
+  body: "[user:display-name],\r\n\r\nEen verzoek om uw gebruikersaccount te annuleren is ingediend bij [site:name].\r\n\r\nU kunt nu uw account annuleren op [site:url-brief] door op onderstaande link te klikken of deze te knippen en plakken in uw browser:\r\n\r\n[user:cancel-url]\r\n\r\nLet op: Het annuleren van uw account kan niet ongedaan worden gemaakt!\r\n\r\nDeze link verloopt binnen één dag. Er gebeurt niets als deze link niet binnen één dag wordt gebruikt.\r\n\r\n--  [site:name] team"
+  subject: 'Verzoek om account te annuleren van [user:display-name] op [site:name]'
+password_reset:
+  body: "[user:display-name],\r\n\r\nOp [site:name] is een verzoek gedaan voor een nieuw wachtwoord van uw account.\r\n\r\nU kunt nu inloggen door op onderstaande link te klikken of deze te kopiëren en te plakken in de adresbalk van uw browser:\r\n\r\n[user:one-time-login-url]\r\n\r\nDeze link kan slechts één keer gebruikt worden en zal u doorverwijzen naar een pagina waar u uw wachtwoord opnieuw kunt instellen. De geldigheid van de link zal na één dag verlopen. Er zal niets gebeuren wanneer de link niet wordt gebruikt.\r\n\r\n--  [site:name] team"
+  subject: 'Vervangende logininformatie voor [user:display-name] op [site:name]'
+register_admin_created:
+  body: "[user:display-name],\r\n\r\nA site administrator at [site:name] has created an account for you. You may now log in by clicking this link or copying and pasting it into your browser:\r\n\r\n[user:one-time-login-url]\r\n\r\nThis link can only be used once to log in and will lead you to a page where you can set your password.\r\n\r\nAfter setting your password, you will be able to log in at [site:login-url] in the future using:\r\n\r\nusername: [user:name]\r\npassword: Your password\r\n\r\n--  [site:name] team"
+  subject: 'Er is een account voor u aangemaakt voor [site:name]'
+register_no_approval_required:
+  body: "[user:display-name],\r\n\r\nDank u voor het registreren bij [site:name]. U kunt nu inloggen door het volgen van onderstaande link of deze te knippen en plakken in uw browser:\r\n\r\n[user:one-time-login-url]\r\n\r\nDeze link kan éénmalig worden gebruikt en zal u doorverwijzen naar een pagina waar u uw wachtwoord kan instellen.\r\n\r\nNa het instellen van uw wachtwoord kunt u in de toekomst inloggen op [site:login-url] met de volgende gegevens:\r\n\r\ngebruikersnaam: [user:name]\r\nwachtwoord: Uw wachtwoord\r\n\r\n--  [site:name] team"
+  subject: 'Activatielink voor de e-OvB EZOEF-app'
+register_pending_approval:
+  body: "[user:display-name],\r\n\r\nBedankt dat u zich heeft geregistreerd op [site:name]. De aanvraag voor een account wacht momenteel op goedkeuring. Zodra de aanvraag is goedgekeurd ontvangt u een e-mail met daarin inloginformatie, hoe het wachtwoord kan worden gewijzigd en andere details.\r\n\r\n\r\n--  [site:name] team"
+  subject: 'Accountgegevens voor [user:display-name] op [site:name] (wachtend op de goedkeuring van de beheerder)'
+register_pending_approval_admin:
+  body: "[user:display-name] heeft een account aangevraagd.\r\n\r\n[user:edit-url]"
+  subject: 'Accountgegevens voor [user:display-name] op [site:name] (wachtend op de goedkeuring van de beheerder)'
+status_activated:
+  body: "[user:display-name],\r\n\r\nUw account op [site:name] is geactiveerd.\r\n\r\nU kunt nu inloggen door op de onderstaande link te klikken of deze in uw browser te kopiëren:\r\n\r\n[user:one-time-login-url]\r\n\r\nDit is een eenmalige login en u wordt doorgestuurd naar een pagina waar u uw wachtwoord kunt instellen.\r\n\r\nNadat u uw wachtwoord heeft gewijzigd, kunt u in de toekomst inloggen op [site:login-url] met:\r\n\r\ngebruikersnaam: [user:account-name]\r\nwachtwoord: Uw wachtwoord\r\n\r\n--  [site:name] team"
+  subject: 'Accountgegevens voor [user:display-name] op [site:name] (goedgekeurd)'
+status_blocked:
+  body: "[user:display-name],\r\n\r\nUw account op [site:name] is geblokkeerd.\r\n\r\n--  [site:name] team"
+  subject: 'Accountgegevens voor [user:display-name] op [site:name] (geblokkeerd)'
+status_canceled:
+  body: "[user:display-name],\r\n\r\nUw account op [site:name] is geannuleerd.\r\n\r\n--  [site:name] team"
+  subject: 'Accountgegevens voor [user:display-name] op [site:name] (geannuleerd)'
+langcode: nl
+_core:
+  default_config_hash: m4J3ROov32OEquRYGLbx3SpdDGuqx9l_zJtNvihqdCg

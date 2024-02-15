@@ -1,0 +1,33 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 755e2e4d-15ae-4d7e-86d4-37aa3bdbaa60
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_push_messagetypes
+    - taxonomy.vocabulary.berichttypen
+  module:
+    - user
+id: user.user.field_push_messagetypes
+field_name: field_push_messagetypes
+entity_type: user
+bundle: user
+label: 'Push messagetypes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      berichttypen: berichttypen
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

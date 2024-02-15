@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  DINY
+*/
+
+"years ago" = "jaren geleden";
+"year ago" = "jaar geleden";
+"months ago" = "maanden geleden";
+"month ago" = "maand geleden";
+"weeks ago" = "weken geleden";
+"week ago" = "week geleden";
+"hours ago" = "uren geleden";
+"hour ago" = "uur geleden";
+"days ago" = "dagen geleden";
+"Yesterday" = "Gisteren";
+"minute ago" = "minuut geleden";
+"minutes ago" = "minuten geleden";
+"seconds ago" = "seconden geleden";
+"Just now" = "Zojuist";

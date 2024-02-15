@@ -1,0 +1,51 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 0f518471-7529-40af-8662-e2a565bc9f98
+langcode: nl
+status: true
+dependencies: {  }
+id: functioneel_beheerder
+label: 'Functioneel beheerder'
+weight: 6
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access comments'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access in-place editing'
+  - 'access shortcuts'
+  - 'access site in maintenance mode'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer comments'
+  - 'administer device tokens'
+  - 'administer nodes'
+  - 'administer shortcuts'
+  - 'administer taxonomy'
+  - 'administer users'
+  - 'administer wysiwyg templates'
+  - 'create announcement content'
+  - 'create incident content'
+  - 'delete any announcement content'
+  - 'delete any incident content'
+  - 'delete incident revisions'
+  - 'delete own announcement content'
+  - 'delete own incident content'
+  - 'delete terms in app_domains'
+  - 'delete terms in berichttypen'
+  - 'edit any announcement content'
+  - 'edit any incident content'
+  - 'edit own announcement content'
+  - 'edit own comments'
+  - 'edit own incident content'
+  - 'edit terms in app_domains'
+  - 'edit terms in berichttypen'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'switch shortcut sets'
+  - 'translate interface'
+  - 'use text format wysiwyg_default'
+  - 'view device tokens'
+  - 'view the administration theme'

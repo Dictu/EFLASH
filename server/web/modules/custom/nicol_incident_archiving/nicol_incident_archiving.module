@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ * Contains nicol_incident_archiving.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function nicol_incident_archiving_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the diny_incident module.
+    case 'help.page.nicol_incident_archiving':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Nicol Incident Archiving') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_cron().
+ */
+function nicol_incident_archiving_cron() {
+  // Archive all expired incidents since at 1'o clock
+  // read config for last_run and date-diff for archiving
+  $config = Drupal::configFactory()->getEditable('nicol_incident_archiving.settings');
+  $last_run = $config->get('archive_last_run');
+  // only at one o'clock at night and only if it has not run before
+  if ((date('G') == 1) && (date('d') != date('d', $last_run)) ) {
+    \Drupal::logger('nicol_incident')->notice('Start archiving on day: %day', ['%day' => date('d')]);
+    \Drupal::logger('nicol_incident')->notice('Last run: %day', ['%day' => date('d', $last_run)]);
+    // Archive_after_x_days in format "7 day"
+    $interval = "-" . $config->get('archive_after_x_days');
+    // Setting is for days, for function below a negative number, because we go back in time
+    $archiving_time = strtotime($interval, time());
+
+    // Get all closed incidents.
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'incident')
+      ->condition('field_status', 'closed')
+      ->condition('changed', $archiving_time, "<")
+      ->accessCheck(FALSE);
+    $nids = $query->execute();
+    if (!empty($nids)) {
+      // Load an array of node objects keyed by node ID.
+      $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
+      foreach ($nodes as $node) {
+        // Set status to 'archived'.
+        $node->set('field_status', 'archived');
+        $node->save();
+      }
+      // Logs a notice.
+      \Drupal::logger('nicol_incident')->notice('Incidents archived: @count.', ['@count' => count($nids)]);
+    }
+    $config->set('archive_last_run', time());
+    $config->save();
+  }
+}

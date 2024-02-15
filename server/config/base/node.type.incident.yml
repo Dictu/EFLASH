@@ -1,0 +1,20 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 265c6d2e-c461-45dc-b967-17b02f35c71f
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Verstoring
+type: incident
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

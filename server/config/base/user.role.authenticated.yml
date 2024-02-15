@@ -1,0 +1,22 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 57e31ee2-0f49-4b4b-ab77-9249732c4527
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Geverifieerde gebruiker'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'add simple_oauth entities'
+  - 'create device token'
+  - 'delete device tokens'
+  - 'refresh access token'
+  - 'restful delete nicol_push_notifications_rest_resource'
+  - 'restful get nicol_messagetypes_rest_resource'
+  - 'restful post nicol_push_notifications_rest_resource'

@@ -1,0 +1,7 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+message: '@site is momenteel wegens onderhoud niet beschikbaar. De website zal binnenkort weer beschikbaar zijn. Bedankt voor uw geduld.'
+langcode: nl
+_core:
+  default_config_hash: Z5MXifrF77GEAgx0GQ6iWT8wStjFuY8BD9OruofWTJ8

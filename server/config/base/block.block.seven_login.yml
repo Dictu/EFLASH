@@ -1,0 +1,25 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 32ab8e9d-7e94-4f9c-8547-05f89a993e2d
+langcode: nl
+status: false
+dependencies:
+  module:
+    - user
+  theme:
+    - seven
+_core:
+  default_config_hash: 4QlSnWBcxxKMIFRM8sbu_MjSkcp3NjGgnVrc-lynQHI
+id: seven_login
+theme: seven
+region: header
+weight: -1
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: Gebruikerslogin
+  provider: user
+  label_display: visible
+visibility: {  }

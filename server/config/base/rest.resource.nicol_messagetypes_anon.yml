@@ -1,0 +1,25 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: c66927d6-d42c-4298-8907-b64b8daa8797
+langcode: nl
+status: true
+dependencies:
+  module:
+    - hal
+    - nicol_api
+    - serialization
+    - simple_oauth
+_core:
+  default_config_hash: zSYhcvBlGO58JyVL9xAgp9SEFjMrMzNDQatDmAyptnc
+id: nicol_messagetypes_anon
+plugin_id: nicol_messagetypes_anon
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - token_bearer

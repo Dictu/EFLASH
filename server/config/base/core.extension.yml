@@ -1,0 +1,82 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+module:
+  admin_toolbar: 0
+  admin_toolbar_tools: 0
+  apn_push: 0
+  block: 0
+  breakpoint: 0
+  ckeditor: 0
+  comment: 0
+  components: 0
+  config: 0
+  config_filter: 0
+  config_ignore: 0
+  config_split: 0
+  content_access: 0
+  contextual: 0
+  csv_serialization: 0
+  datetime: 0
+  dblog: 0
+  dynamic_page_cache: 0
+  editor: 0
+  field: 0
+  field_group: 0
+  field_ui: 0
+  file: 0
+  filter: 0
+  hal: 0
+  help: 0
+  language: 0
+  link: 0
+  locale: 0
+  menu_link_content: 0
+  menu_ui: 0
+  nicol_api: 0
+  nicol_incident_archiving: 0
+  nicol_push_notifications: 0
+  node: 0
+  options: 0
+  page_cache: 0
+  path: 0
+  path_alias: 0
+  pcr: 0
+  push_notifications: 0
+  quickedit: 0
+  raven: 0
+  rest: 0
+  restui: 0
+  rules: 0
+  search: 0
+  serialization: 0
+  shortcut: 0
+  shs: 0
+  simple_oauth: 0
+  statistics: 0
+  syslog: 0
+  system: 0
+  taxonomy: 0
+  text: 0
+  toolbar: 0
+  typed_data: 0
+  update: 0
+  user: 0
+  user_registrationpassword: 0
+  vde_drush: 0
+  views: 0
+  views_data_export: 0
+  views_ui: 0
+  wysiwyg_template: 0
+  wysiwyg_template_core: 0
+  minimal: 1000
+theme:
+  stable: 0
+  classy: 0
+  seven: 0
+  bootstrap_rijkshuisstijl: 0
+  ezoef: 0
+_core:
+  default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
+langcode: nl
+profile: minimal

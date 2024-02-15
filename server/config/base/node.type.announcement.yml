@@ -1,0 +1,24 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: ef48fabe-ce5a-44a8-82e3-93da05f57409
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - wysiwyg_template
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  wysiwyg_template:
+    default_template: ''
+name: Mededeling
+type: announcement
+description: 'Use <em>announcement</em> for sending info message, such as before the holidays ''Remember your password and if expired: This is the procedure for reset''.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

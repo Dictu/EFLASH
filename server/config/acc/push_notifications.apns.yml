@@ -1,0 +1,16 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+host: gateway.push.apple.com
+certificate_random: SSSSSSSSSS
+notification_sound: default
+query_feedback_service: true
+stream_context_limit: 25
+environment: development
+passphrase: SSSSSSSSSSSSSS
+certificate_folder: /data/ezoef.acc/certificates/acc/
+set_entrust_certificate: true
+_core:
+  default_config_hash: 0X-kLoX-H-BkLSBQCjBY3J4ZfGDJjUIb0ig_0ibGWmw
+langcode: nl
+bundle_id: nl.minez.eovb.eflash

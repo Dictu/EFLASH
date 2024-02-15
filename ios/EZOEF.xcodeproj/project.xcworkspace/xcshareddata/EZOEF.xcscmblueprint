@@ -1,0 +1,27 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "603ac800-a417-c144-b3ad-70512f24fccc++316",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "603ac800-a417-c144-b3ad-70512f24fccc++316" : {
+      "DVTSourceControlWorkingCopyRepositoryBranchesLocationKey" : "iosclient\/branches",
+      "DVTSourceControlWorkingCopyRepositoryTagsLocationKey" : "iosclient\/tags",
+      "DVTSourceControlWorkingCopyRepositoryPrimaryBranchLocationKey" : "iosclient\/trunk"
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "603ac800-a417-c144-b3ad-70512f24fccc++316" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9B8BB247-D57C-4A72-8EFB-6F938903019E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "603ac800-a417-c144-b3ad-70512f24fccc++316" : "EZOEF\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "EZOEF",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "EZOEF.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/minlnv9526v.minlnv.agro.nl:7676\/lnv\/diny-app",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "603ac800-a417-c144-b3ad-70512f24fccc++316"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+anonymous: Anoniem
+verify_mail: false
+notify:
+  cancel_confirm: true
+  password_reset: true
+  status_activated: false
+  status_blocked: false
+  status_canceled: false
+  register_admin_created: true
+  register_no_approval_required: false
+  register_pending_approval: false
+register: admin_only
+cancel_method: user_cancel_block
+password_reset_timeout: 86400
+password_strength: true
+langcode: nl
+_core:
+  default_config_hash: r4kwhOM0IWXVMUZDz744Yc16EOh37ZhYbA8kGOhSmLk

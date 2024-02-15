@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnOffViewController" customModule="Diny" customModuleProvider="target">
+            <connections>
+                <outlet property="onOffSwitch" destination="xJT-rF-Cj7" id="nVd-vA-2oB"/>
+                <outlet property="textLabel" destination="QzB-KF-pap" id="UFJ-xf-eZl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="272" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzB-KF-pap">
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="MgH-Mg-ZVt"/>
+                        <constraint firstAttribute="height" constant="44" id="SMR-1o-dcx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJT-rF-Cj7">
+                    <frame key="frameInset" minX="213" minY="6" width="51" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="6r4-6C-VHR"/>
+                        <constraint firstAttribute="width" constant="49" id="iPr-zW-t7n"/>
+                    </constraints>
+                    <connections>
+                        <action selector="onOffSwitchValueChanged:" destination="-1" eventType="valueChanged" id="BIY-1w-MeY"/>
+                    </connections>
+                </switch>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QzB-KF-pap" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4F1-W7-JfE"/>
+                <constraint firstItem="xJT-rF-Cj7" firstAttribute="leading" secondItem="QzB-KF-pap" secondAttribute="trailing" constant="10" id="GwD-3I-VW3"/>
+                <constraint firstAttribute="bottom" secondItem="QzB-KF-pap" secondAttribute="bottom" id="Gyt-LZ-dYC"/>
+                <constraint firstItem="QzB-KF-pap" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="IoR-CG-DY2"/>
+                <constraint firstItem="QzB-KF-pap" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="bnl-6h-9gz"/>
+                <constraint firstItem="xJT-rF-Cj7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="6" id="hMu-xz-gfy"/>
+                <constraint firstItem="QzB-KF-pap" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oBa-3D-oAf"/>
+                <constraint firstAttribute="trailing" secondItem="xJT-rF-Cj7" secondAttribute="trailing" constant="10" id="p64-oo-Rs1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="260" y="63"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+ SPDX-License-Identifier: EUPL-1.2
+-->
+
+<resources>
+    <color name="colorPrimary">#F36A4A</color>
+    <color name="colorPrimaryDark">#E5A050</color>
+    <color name="colorAccent">#F36A4A</color>
+
+    <color name="colorButtonNormal">#F36A4A</color>
+    <color name="colorButtonDark">#E5A050</color>
+    <color name="colorButtonLight">#FFF36A4A</color>
+    <color name="colorTranslucentWhite">#DAFFFFFF</color>
+    <color name="colorLightGrey">#D4D4D4</color>
+    <color name="colorTouchHighlight">#FAFAFA</color>
+    <color name="colorLineGrey">#D7D7D7</color>
+    <color name="colorDarkText">#DD000000</color>
+    <color name="colorGreyAccent">#636363</color>
+</resources>

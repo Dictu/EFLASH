@@ -1,0 +1,36 @@
+# Copyright 2023 De Staat der Nederlanden, Dienst ICT Uitvoering
+# SPDX-License-Identifier: EUPL-1.2
+
+uuid: 9e388258-ed08-49ec-a1e2-94046929ac10
+langcode: nl
+status: true
+dependencies: {  }
+id: prepare_push_notifications_new
+label: 'Prepare push notifications new'
+events:
+  -
+    event_name: 'rules_entity_insert:node'
+description: 'Prepare push notifications for new incidents'
+tags:
+  - ezoef
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 338516c0-4c5c-483b-913a-07d12daab821
+  conditions:
+    id: rules_and
+    uuid: 11a5e806-3a38-4f53-b6c1-bf3ae383a178
+    conditions: {  }
+  actions:
+    id: rules_action_set
+    uuid: cf25e09b-3ac3-481e-ada1-955e385c18d6
+    actions:
+      -
+        id: rules_action
+        uuid: 5fb8fb46-aba5-4b48-a78f-5052c95e4c38
+        context_values: {  }
+        context_mapping:
+          entity: node
+        context_processors: {  }
+        provides_mapping: {  }
+        action_id: rules_nicol_prepare_push_notifications

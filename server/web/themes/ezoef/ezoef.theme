@@ -1,0 +1,368 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Bootstrap Rijkshuisstijl theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\crop\Entity\Crop;
+use Drupal\Core\Url;
+
+
+/**
+ * Theme setting callbacks for the Bootstrap Rijkshuisstijl theme.
+ */
+function ezoef_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id = NULL) {
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+
+  $form['color_scheme'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Color scheme'),
+  );
+
+  $url_logo_header = Url::fromUri('https://www.rijkshuisstijl.nl/bouwstenen/algemene-online-richtlijnen/logo-en-header');
+  $link_logo_header = \Drupal::l(t('logo and header'), $url_logo_header);
+  $form['logo_header'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Logo and header'),
+    '#description'  => t("Settings regarding the %url for this site.", array('%url' => $link_logo_header)),
+  );
+
+  $form['logo_header']['logo'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Logo'),
+  );
+
+  $form['logo_header']['header'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Website header'),
+  );
+
+  $form['logo_header']['navigation'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Main navigation'),
+  );
+
+  $url_color_scheme = Url::fromUri('https://www.rijkshuisstijl.nl/bouwstenen/kleur/online-kleuren');
+  $link_color_scheme = \Drupal::l(t('the color palette'), $url_color_scheme);
+  $form['color_scheme']['brand_color'] = array(
+    '#type' => 'radios',
+    '#title' => t('Theme color'),
+    '#default_value' => theme_get_setting('brand_color'),
+    '#options' => array(
+      'azure' => t('Azure'),
+      'brown' => t('Brown'),
+      'dark-blue' => t('Dark blue'),
+      'dark-brown' => t('Dark-brown'),
+      'dark-green' => t('Dark green'),
+      'dark-yellow' => t('Dark yellow'),
+      'green' => t('Green'),
+      'light-blue' => t('Light blue'),
+      'mint-green' => t('Mint green'),
+      'moss-green' => t('Moss green'),
+      'orange' => t('Orange'),
+      'pink' => t('Pink'),
+      'purple' => t('Purple'),
+      'red' => t('Red'),
+      'ruby' => t('Ruby'),
+      'violet' => t('Violet'),
+      'yellow' => t('Yellow'),
+      ),
+    '#description'  => t("For online use, you can choose any color from %url. A color can be chosen freely and can not be claimed by an organization. For online applications, you can choose from a palette of 17 colors. You basically choose one base color with two additional light tones support. These tones may also be used in boxes and tables as a background color.", array('%url' => $link_color_scheme)),
+  );
+
+  $form['logo_header']['logo']['sender_primary'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Primary sender'),
+    '#default_value' => theme_get_setting('sender_primary'),
+    '#description'   => t("Primary sender next to brand mark (ribbon)"),
+  );
+
+  $form['logo_header']['logo']['sender_secondary'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Secondary sender'),
+    '#default_value' => theme_get_setting('sender_secondary'),
+    '#description'   => t("Secondary sender next to brand mark (ribbon)"),
+  );
+
+  $url_sender_breakpoint = Url::fromUri('http://v4-alpha.getbootstrap.com/layout/responsive-utilities/#available-classes');
+  $link_sender_breakpoint = \Drupal::l(t('The .hidden-*-down classes method is used from Bootstrap'), $url_sender_breakpoint);
+  $form['logo_header']['logo']['sender_breakpoint'] = array(
+    '#type'          => 'select',
+    '#title'         => t('Hide senders for this breakpoint and smaller'),
+    '#default_value' => theme_get_setting('sender_breakpoint'),
+    '#options' => array(
+      '' => t('Select a breakpoint'),
+      'xs' => t('XS (< 544px)'),
+      'sm' => t('SM (< 768px)'),
+      'md' => t('MD (< 992px)'),
+      'lg' => t('LG (< 1200px)'),
+      'xl' => t('XL ≥ 1200px'),
+      ),
+    '#description'   => t("You can hide the senders for mobile and/or tablet to set the breakpoint to sm or md. To hide the sender on every screen format chose: xl. %url", array('%url' => $link_sender_breakpoint)),
+  );
+
+  $form['logo_header']['header']['titlebar'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Title bar'),
+    '#default_value' => theme_get_setting('titlebar'),
+    '#description'   => t("The title bar is optional and intended for sites that are not in the sender structure as part of the organization and provides space for a name and / or payoff. The title bar is 30 pixels high in a corresponding hue of the main navigation bar color. The text color is always black."),
+    '#size' => 128,
+  );
+
+  $form['logo_header']['header']['header_bg_picture'] = array(
+    '#type'          => 'managed_file',
+    '#title'         => t('Background picture'),
+    '#default_value' => theme_get_setting('header_bg_picture'),
+    '#upload_location' => 'public://bg_picture/',
+    '#description'   => t("A picture can be placed in background. This is only used in E-zines and project websites."),
+  );
+
+  $form['logo_header']['header']['header_bg_picture_width'] = array(
+    '#type' => 'radios',
+    '#title' => t('Background width'),
+    '#default_value' => theme_get_setting('header_bg_picture_width'),
+    '#options' => array('6' => t('50%'), '12' => t('100%')),
+    '#description'   => t("The background picture can have a width of 50% or 100%. This is only used in E-zines and project websites."),
+  );
+
+  $form['logo_header']['header']['header_bg_color'] = array(
+    '#type' => 'radios',
+    '#title' => t('Background color'),
+    '#default_value' => theme_get_setting('header_bg_color'),
+    '#options' => array('0' => t('None'), '1' => t('Primary color')),
+    '#description'  => t("The header can get a background color. This is only used in E-zines and project websites."),
+  );
+
+  $form['logo_header']['navigation']['navigation_border'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Have always a border of 10px below the main navigation.'),
+    '#default_value' => theme_get_setting('navigation_border'),
+  );
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function ezoef_preprocess_html(&$variables) {
+  $http_equiv = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'http-equiv' => 'x-ua-compatible',
+      'content' => 'ie=edge',
+    ),
+  );
+  $variables['page']['#attached']['html_head'][] = [$http_equiv, 'http-equiv'];
+
+  // If on a node add or edit page, add a node-layout class.
+  $path_args = explode('/', \Drupal::request()->getPathInfo());
+  if ($suggestions = theme_get_suggestions($path_args, 'page', '-')) {
+    foreach ($suggestions as $suggestion) {
+      if ($suggestion === 'page-node-edit' || strpos($suggestion, 'page-node-add') !== FALSE) {
+        $variables['attributes']['class'][] = 'node-form-layout';
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_preprocess_page().
+ */
+function ezoef_preprocess_page(&$variables) {
+  // Declare theme settings.
+  $variables['theme_logo'] = theme_get_setting('logo.url');
+  $variables['theme_slogan'] = \Drupal::config('system.site')->get('slogan');
+  $variables['theme_sender_primary'] = strip_tags(theme_get_setting('sender_primary'));
+  $variables['theme_sender_secondary'] = strip_tags(theme_get_setting('sender_secondary'));
+  $variables['theme_sender_breakpoint_class'] = 'hidden-' . theme_get_setting('sender_breakpoint') . '-down';
+  $variables['theme_titlebar'] = strip_tags(theme_get_setting('titlebar'));
+  $file_array = theme_get_setting('header_bg_picture');
+  if (count($file_array) && $file = file_load(reset($file_array))) {
+    $variables['theme_header_bg_picture'] = file_create_url($file->getFileUri());
+  }
+  $variables['theme_header_bg_picture_width'] = theme_get_setting('header_bg_picture_width');
+  $variables['theme_header_bg_color'] = theme_get_setting('header_bg_color');
+
+  // Define default classes for containers.
+  $variables['navbar_attributes'] = array(
+    'class' => array (
+      'navbar',
+      'navbar-full',
+      'navbar-branded',
+    ),
+  'id' => array ('navbar-main'),
+  );
+
+  if (theme_get_setting('navigation_border')) {
+    $variables['navbar_attributes']['class'][] = 'navbar-border';
+  }
+
+  // Declare region attributes.
+  $variables['navbar_attributes'] = new Attribute($variables['navbar_attributes']);
+
+  // Load color scheme css.
+  $variables['#attached']['library'][] = 'bootstrap_rijkshuisstijl/'.theme_get_setting('brand_color');
+  $variables['#attached']['library'][]  = 'ezoef/ezoef-override';
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function ezoef_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // If on an individual node page, add the node type to theme suggestions.
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $first_suggestion = array_shift($suggestions);
+    array_unshift($suggestions, 'page__node__' . $node->bundle());
+    if ($first_suggestion) {
+      array_unshift($suggestions, $first_suggestion);
+    }
+    if (in_array('page__node__edit', $suggestions)) {
+      $suggestions[] = 'page__node__edit__' . $node->bundle();
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function ezoef_preprocess_node(&$variables) {
+  // Remove the "Add new comment" link on teasers or when the comment form is displayed on the page.
+  if ($variables['teaser'] || !empty($variables['content']['comments']['comment_form'])) {
+    unset($variables['content']['links']['comment']['#links']['comment-add']);
+  }
+}
+
+function ezoef_preprocess_form_element(&$variables) {
+  if (isset($variables['label']['#title']) && is_object($variables['label']['#title'] && method_exists($variables['label']['#title'], 'render'))) {
+    $variables['input_title'] = $variables['label']['#title']->render();
+  }
+  if (isset($variables['element']['#attributes'])) {
+    $variables['input_attributes'] = new Attribute($variables['element']['#attributes']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_input() to add classes to inputs.
+ */
+function ezoef_preprocess_input(&$variables) {
+  if ($variables['element']['#type'] == 'submit') {
+    $variables['attributes']['class'][] = 'btn';
+    $variables['attributes']['class'][] = 'btn-primary';
+  }
+}
+
+/**
+ * Implements hook_menu_local_task() to add class to tab link.
+ */
+function ezoef_preprocess_menu_local_task(&$variables) {
+  $variables['attributes']['class'][] = 'nav-link';
+}
+
+/**
+ * Implements hook_preprocess_comment() to remove title link.
+ */
+function ezoef_preprocess_comment(&$variables) {
+  /** @var \Drupal\comment\CommentInterface $comment */
+  $comment = $variables['elements']['#comment'];
+
+  // Set title to remove link to /comment/# .
+  $variables['title'] = $comment->getSubject();
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for \Drupal\node\NodeForm.
+ *
+ * Changes vertical tabs to container and adds meta information.
+ */
+function ezoef_form_node_form_alter(&$form, FormStateInterface $form_state) {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $form_state->getFormObject()->getEntity();
+
+  $form['#theme'] = array('node_edit_form');
+
+  $form['advanced']['#type'] = 'container';
+  $is_new = !$node->isNew() ? format_date($node->getChangedTime(), 'short') : t('Not saved yet');
+  $form['meta'] = array(
+    '#attributes' => array('class' => array('entity-meta__header')),
+    '#type' => 'container',
+    '#group' => 'advanced',
+    '#weight' => -100,
+    'published' => array(
+      '#type' => 'html_tag',
+      '#tag' => 'h3',
+      '#value' => $node->isPublished() ? t('Published') : t('Not published'),
+      '#access' => !$node->isNew(),
+      '#attributes' => array(
+        'class' => 'entity-meta__title',
+      ),
+    ),
+    'changed' => array(
+      '#type' => 'item',
+      '#wrapper_attributes' => array('class' => array('entity-meta__last-saved', 'container-inline')),
+      '#markup' => '<h4 class="label inline">' . t('Last saved') . '</h4> ' . $is_new,
+    ),
+    'author' => array(
+      '#type' => 'item',
+      '#wrapper_attributes' => array('class' => array('author', 'container-inline')),
+      '#markup' => '<h4 class="label inline">' . t('Author') . '</h4> ' . $node->getOwner()->getUsername(),
+    ),
+  );
+  $form['revision_information']['#type'] = 'container';
+  $form['revision_information']['#group'] = 'meta';
+}
+
+/**
+ * Implements hook_preprocess_image_style()
+ */
+function ezoef_preprocess_image_style(&$variables) {
+
+  // If focal_point module is there, add some extra attribute data for responsive focuspoint.
+  $moduleHandler = \Drupal::service('module_handler');
+  if ($moduleHandler->moduleExists('focal_point') && !empty($variables['uri'])){
+
+    $crop_type = \Drupal::config('focal_point.settings')->get('crop_type');
+    $crop = Crop::findCrop($variables['uri'], $crop_type);
+
+    if ($crop) {
+      $imageH = $variables['image']['#height'];
+      $imageW = $variables['image']['#width'];
+      /** $imageH = $variables['height']; */
+      /** $imageW = $variables['width']; */
+      $anchor = \Drupal::service('focal_point.manager')
+        ->absoluteToRelative($crop->x->value, $crop->y->value, $imageW, $imageH);
+
+      // Set percentage.
+      $percentageX = $anchor['x'];
+      $percentageY = $anchor['y'];
+
+      // Calculate x & y for focalpoint (https://github.com/jonom/jquery-focuspoint#how-to-use) set percentage to offset.
+      $offsetX = ($percentageX/100)*$imageW;
+      $offsetY = ($percentageY/100)*$imageH;
+
+      // Set focus.
+      $focusX = ($offsetX/$imageW - .5)*2;
+      $focusY = ($offsetY/$imageH - .5)*-2;
+
+      // Set 'focuspoint' to data attributes.
+      $variables['attributes']['data-focus-x'] = $focusX;
+      $variables['attributes']['data-focus-y'] = $focusY;
+      $variables['attributes']['data-image-w'] = $imageW;
+      $variables['attributes']['data-image-h'] = $imageH;
+      // Set focuspoint percentage, can be used for css only solution.
+      $variables['attributes']['data-focus-x-pct'] = $percentageX;
+      $variables['attributes']['data-focus-y-pct'] = $percentageY;
+
+      // Set 'focuspoint' class as marker.
+      $variables['attributes']['class'][] = 'focuspoint';
+    }
+  }
+}
